@@ -12,12 +12,19 @@
 <body>
 <div id="root"></div>
 <script type="text/babel">
-  const element = (
-    <h1 className="greeting">
-      Hello, world!
-    </h1>
+function Noop(props) {
+  return (
+    <div>{props.foo}</div>
   );
-  ReactDOM.render(element, document.querySelector('#root'));
+}
+class Newbie extends React.Component {
+  render() {
+    return (
+      <Noop foo="bar"/>
+    );
+  }
+}
+ReactDOM.render(<Newbie/>, document.querySelector('#root'));
 </script>
 <!-- <script type="text/babel" src="/live-server/script/lesson1.js"></script> -->
 </body>

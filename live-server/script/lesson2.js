@@ -1,4 +1,10 @@
 class ShoppingList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: null
+    };
+  }
   render() {
     return React.createElement('div', {
       className: 'shopping-list',
@@ -10,3 +16,4 @@ class ShoppingList extends React.Component {
     });
   }
 }
+ReactDOM.render(<ShoppingList />, document.querySelector('#root'));
