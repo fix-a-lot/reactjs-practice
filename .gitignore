@@ -40,7 +40,10 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+
+# Dependency lock files
 package-lock.json
+yarn.lock
 
 # TypeScript v1 declaration files
 typings/
@@ -103,5 +106,3 @@ dist
 
 # TernJS port file
 .tern-port
-
-yarn.lock
