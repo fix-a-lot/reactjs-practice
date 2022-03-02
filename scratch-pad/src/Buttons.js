@@ -16,7 +16,10 @@ function UseRefTest() {
   );
 }
 
-function UseRefTest2() {
+function UseRefTest2(a, b, c) {
+  console.log('a:', a);
+  console.log('b:', b);
+  console.log('c:', c);
   const [focusSwitch, setFocusSwitch] = useState(true);
   const focused = useRef(null);
 

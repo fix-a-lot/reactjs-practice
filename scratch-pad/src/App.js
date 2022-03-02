@@ -11,7 +11,7 @@ function App() {
       <article className="App-article">
         <p>Hello world!</p>
         <span>누르면 입력란으로 포커싱: </span>
-        <UseRefTest2 />
+        <UseRefTest2 ya="123" ho="234"/>
       </article>
     </div>
   );
