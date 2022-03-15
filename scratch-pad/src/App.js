@@ -5,6 +5,7 @@ import { /* UseRefTest,  */UseRefTest2 } from "./Buttons";
 function App() {
   const rf = useRef("멋에쓰는물건인고");
   console.log(rf.current);
+  
 
   return (
     <div className="App">

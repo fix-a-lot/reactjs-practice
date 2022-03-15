@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+
+<script type="text/babel">
+  const root = document.getElementById('root');
+
+  /* 버튼 컴포넌트 */
+  function Btn(props) {
+    console.log('Btn props: ', props);
+
+    const changeValue = function() {
+      props.setMyNum((cur) => cur + props.changeAmount);
+    }
+
+    return(
+      <button className={props.className} onClick={props.onClick} onClick={changeValue}>{props.text}</button>
+    )
+  }
+
+  /* 앱 컴포넌트 */
+  function App(){
+    const [myNum, setMyNum] = React.useState(50);
+
+    // myNum 변화 확인 용 코드
+    React.useEffect(() => {
+      console.log('myNum:', myNum);
+    }, [myNum]);
+    
+    return(
+      <div>
+        <Btn text="Super Minus(-5)" className="mgR10" changeAmount={-5} setMyNum={setMyNum} />
+        <Btn text="Minus(-1)" className="mgR10" changeAmount={-1} setMyNum={setMyNum} />
+        <Btn text="Plus(+1)" className="mgR10" changeAmount={1} setMyNum={setMyNum} />
+        <Btn text="Super Plus(+5)" changeAmount={5} setMyNum={setMyNum} />
+        <br />
+        <span>{myNum}</span>
+      </div>
+    )
+  };
+      
+  ReactDOM.render(<App />, root);
+</script>
+</html>
+
+
+<!-- <Btn text="Super Minus(-5)" className="mgR10" onClick={changeValue(-5)} />
+  <Btn text="Minus(-1)" className="mgR10" onClick={changeValue(-1)} />
+  <Btn text="Plus(+1)" className="mgR10" onClick={changeValue(1)} />
+  <Btn text="Super Plus(+5)" onClick={changeValue(5)} /> -->

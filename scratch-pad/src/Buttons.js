@@ -16,10 +16,9 @@ function UseRefTest() {
   );
 }
 
-function UseRefTest2(a, b, c) {
-  console.log('a:', a);
-  console.log('b:', b);
-  console.log('c:', c);
+function UseRefTest2({ya, ho}) { // {ya, ho}: 디스트럭쳐링
+  console.log('ya:', ya);
+  console.log('ho:', ho);
   const [focusSwitch, setFocusSwitch] = useState(true);
   const focused = useRef(null);
 
@@ -30,13 +29,13 @@ function UseRefTest2(a, b, c) {
   };
 
   const arr = [true, false];
-
+  let idx = 0;
   return (
     <>
       {
         arr.map(item => {
           return (
-            <div ref={item === focusSwitch ? focused : null} 
+            <div ref={item === focusSwitch ? focused : null} key={idx++}
               className={item === focusSwitch ? 'active' : ''}>phewphew!</div>
           );
         })
