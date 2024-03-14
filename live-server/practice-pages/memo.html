@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
+<title>memo()</title>
 <script src="/live-server/lib/react.development.js"></script>
 <script src="/live-server/lib/react-dom.development.js"></script>
 <script src="/live-server/lib/babel.min.js"></script>
@@ -11,24 +11,34 @@
 <body>
 <main id="root"></main>
 <script type="text/babel">
-function App() {
-  // return (
-  //   <div>
-  //     <h1>Super Converter</h1>
-  //     <label for="minutes">Minutes</label>
-  //     <input type="number" id="minutes" placeholder="Minutes"  />
-  //     <label for="hours">Hours</label>
-  //     <input type="number" id="hours" placeholder="Hours"  />
-  //   </div>
-  // );
-  this.state = {
-    someFlag: false
-  }
-  this.setState({someFlag: true});
+const {
+  useState, 
+  useEffect, 
+  useRef,
+  memo
+} = React;
+
+console.log('memo:', memo);
+
+const Btn = props => {
+  console.log(props.text, 'was rendered');
   return (
-    <input type="text" placeholder="Hours" http-equiv classid />
+    <button onClick={props.clickHandler}>{props.text}</button>
   );
 };
+
+const MemoizedBtn = memo(Btn);
+
+const App = () => {
+  const [value, setValue] = useState('save changes');
+  return (
+    <div>
+      <Btn text={value} clickHandler={() => setValue('revert changes')}></Btn>
+      <MemoizedBtn text="continue"></MemoizedBtn>
+    </div>
+  );
+};
+
 const main = document.querySelector('main');
 const root = ReactDOM.createRoot(main);
 root.render(<App />);

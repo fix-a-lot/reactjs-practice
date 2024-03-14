@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
-<script src="/lib/react.development.js"></script>
-<script src="/lib/react-dom.development.js"></script>
-<script src="/lib/babel.min.js"></script>
+<script src="/live-server/lib/react.development.js"></script>
+<script src="/live-server/lib/react-dom.development.js"></script>
+<script src="/live-server/lib/babel.min.js"></script>
+<script src="/live-server/lib/prop-types.js"></script>
 </head>
 <body>
 <main id="root"></main>
@@ -36,6 +37,9 @@ const Btn = (props) => {
   if (props.backgroundColor) {
     customStyle.backgroundColor = props.backgroundColor;
   }
+  if (props.fontSize) {
+    customStyle.fontSize = `${props.fontSize}px`;
+  }
 
   return (
     <button type={props.type} style={customStyle} onClick={props.clickHandler}>
@@ -44,6 +48,13 @@ const Btn = (props) => {
   );
 };
 
+Btn.propTypes = {
+  text: PropTypes.string,
+  clickHandler: PropTypes.func,
+  type: PropTypes.string.isRequired,
+  backgroundColor: PropTypes.string,
+  fontSize: PropTypes.number
+};
 const App = () => {
   const [value, setValue] = useState('save changes');
   const changeValue = () => setValue('revert changes')
@@ -51,6 +62,7 @@ const App = () => {
     <div>
       <Btn text={value} clickHandler={changeValue} type="button" backgroundColor="skyblue"></Btn>
       <Btn text="continue" type="button" backgroundColor="tomato"></Btn>
+      <Btn text={'18'} fontSize={18}></Btn>
     </div>
   );
 };
