@@ -45,7 +45,10 @@ const App = () => {
             value={value}
             onInput={handleInput} />
         <button type="submit">submit</button>
-        <p>content of values: {values.join(', ')}</p>
+        <p>content of values:</p>
+        <ul>
+          {values.map((v, i) => <li key={i}>{v}</li>)}
+        </ul>
       </form>
     </main>
   );

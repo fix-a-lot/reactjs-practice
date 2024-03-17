@@ -2,45 +2,29 @@ import {
   useState,
   useEffect
 } from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
 
-import Button from './component/Button';
+import Button from './components/Button';
 import styles from './App,module.css';
+import Home from './routes/Home';
+import Detail from './routes/Detail';
 
 function App() {
-  const [todo, setTodo] = useState([]);
-  const [toDos, setTodos] = useState([]);
-  const handleChange = event => setTodo(event.target.value);
-  const handleSubmit = event => {
-    event.preventDefault();
-    console.log(todo);
-    if (todo === '') {
-      return;
-    }
-    setTodo('');
-    setTodos([...toDos, todo]);
-  };
-
-  // useEffect(() => {
-  console.log('toDos:', toDos);
-  // }, [toDos]);
-
   return (
-    <div>
-      <h1>My TO-DO List ({toDos.length})</h1>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Add todo" autoFocus
-            onChange={handleChange} value={todo} />&nbsp;
-        <button type="submit">Add To Do</button>
-      </form>
-      <hr />
-      <ul>
-        {toDos.map((item, index) => {
-          return (
-            <li key={index}>{item}</li>
-          );
-        })}
-      </ul>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/movie">
+          <Detail />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
