@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<main id="root"></main>
+<script type="text/babel">
+const {
+  useState, 
+  useEffect, 
+  useRef,
+  createContext,
+  useContext,
+  memo
+} = React;
+
+// function Input(props) {
+  
+//   function changeHandler(event) {
+//     setCount(prev => prev + 1);
+//   }
+//   return (
+//     <input type={props.type} onChange={changeHandler} value={count} />
+//   );
+// }
+
+// import React, { createContext, useContext, useState } from 'react';
+
+const Foo = createContext({});
+
+function Division({ children }) {
+  return <div>{children}</div>;
+}
+
+function Paragraph({ count }) {
+  return <p>click count: {count}</p>;
+}
+
+function Button({ children }) {
+  const { increment } = useContext(Foo);
+  return <button type="button" onClick={increment}>{children}</button>;
+}
+
+const App = () => {
+  const [count, setCount] = useState(0);
+  const increment = () => setCount((prev) => prev + 1);
+  return (
+    <main>
+      <h1>App</h1>
+      <Foo.Provider value={{ increment }}>
+        <Division>
+          <Button>click me</Button>
+        </Division>
+        <Division>
+          <Button>click me too</Button>
+        </Division>
+        <Division>
+          <Paragraph count={count} />
+        </Division>
+      </Foo.Provider>
+    </main>
+  );
+};
+
+const root = ReactDOM.createRoot(document.querySelector('#root'));
+root.render(<App/>);
+</script>
+</body>
+</html>
