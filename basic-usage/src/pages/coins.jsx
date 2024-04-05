@@ -3,7 +3,7 @@ import {
   useEffect
 } from 'react';
 
-function App() {
+export default function Coins() {
   const [loading, setLoading] = useState(true);
   const [coins, setCoins] = useState([]);
   useEffect(() => {
@@ -15,8 +15,8 @@ function App() {
         });
   }, []);
   return (
-    <div>
-      <h1>The Coins! ({coins.length})</h1>
+    <article>
+      <h2>The Coins! ({coins.length})</h2>
       {
         loading ? (
           <strong>Loading...</strong> : null
@@ -30,8 +30,6 @@ function App() {
           </select>
         )
       }
-    </div>
+    </article>
   );
 }
-
-export default App;
