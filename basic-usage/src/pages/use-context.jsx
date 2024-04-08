@@ -1,19 +1,10 @@
+// use-context.jsx
 import { createContext, useContext, useState } from 'react';
+import Division from '../component/division';
+import Button from '../component/button';
+import Paragraph from '../component/paragraph';
 
-const Foo = createContext({});
-
-function Division({ children }) {
-  return <div>{children}</div>;
-}
-
-function Paragraph({ count }) {
-  return <p>click count: {count}</p>;
-}
-
-function Button({ children }) {
-  const { increment } = useContext(Foo);
-  return <button type="button" onClick={increment}>{children}</button>;
-}
+export const Foo = createContext({});
 
 export default function UseContext() {
   const [count, setCount] = useState(0);
@@ -21,7 +12,7 @@ export default function UseContext() {
   return (
     <article>
       <h2>useContext</h2>
-      <Foo.Provider value={{ increment }}>
+      <Foo.Provider value={{ count, increment }}>
         <Division>
           <Button>click me</Button> {/*이 버튼이나*/}
         </Division>
@@ -29,9 +20,9 @@ export default function UseContext() {
           <Button>click me too</Button> {/*이 버튼을 누르면*/}
         </Division>
         <Division>
-          <Paragraph count={count} /> {/*이 값이 증가함*/}
+          <Paragraph /> {/*이 값이 증가함*/}
         </Division>
       </Foo.Provider>
     </article>
   );
-};
+}
