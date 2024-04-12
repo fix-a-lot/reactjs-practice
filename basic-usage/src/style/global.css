@@ -1,0 +1,13 @@
+* {
+  font-family: '맑은고딕'
+}
+
+button {
+  color: black;
+  font-weight: 800;
+  padding: 10px 20px;
+  border: 1px black solid;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 3px 5px;
+}

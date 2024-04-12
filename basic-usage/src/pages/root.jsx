@@ -22,6 +22,9 @@ export default function Root() {
             <li>
               <Link to={`/coins`}>coins</Link>
             </li>
+            <li>
+              <Link to={`/props`}>props</Link>
+            </li>
           </ul>
         </nav>
       </header>
