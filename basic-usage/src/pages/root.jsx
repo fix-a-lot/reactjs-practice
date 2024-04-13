@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet } from 'react-router-dom';
 
 export default function Root() {
   return (
@@ -25,11 +25,14 @@ export default function Root() {
             <li>
               <Link to={`/props`}>props</Link>
             </li>
+            <li>
+              <Link to={`/forward-ref`}>forward-ref</Link>
+            </li>
           </ul>
         </nav>
       </header>
       <hr />
-      <main id="detail">
+      <main id='detail'>
         <Outlet />
       </main>
     </>

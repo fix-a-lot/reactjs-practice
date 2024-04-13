@@ -10,6 +10,7 @@ import UseRef from './pages/use-ref';
 import Coins from './pages/coins';
 import UseContext from './pages/use-context';
 import Props from './pages/props';
+import ForwardRef from './pages/forward-ref';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: 'props',
         element: <Props />,
+      },
+      {
+        path: 'forward-ref',
+        element: <ForwardRef />,
       },
     ],
   },
