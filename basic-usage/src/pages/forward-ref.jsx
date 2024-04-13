@@ -1,4 +1,4 @@
-import { forwardRef, useRef } from 'react';
+import {forwardRef, useRef} from 'react';
 import styles from '../style/forward-ref.module.css';
 
 // 자식 컴포넌트
@@ -6,7 +6,7 @@ const ChildComponent = forwardRef((props, ref) => {
   return (
     <div>
       <h3>Child Component</h3>
-      <input type='text' ref={ref} />
+      <input type="text" ref={ref} />
     </div>
   );
 });

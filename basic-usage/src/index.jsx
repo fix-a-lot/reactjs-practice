@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 
 import './style/global.css';
 
@@ -19,30 +19,30 @@ const router = createBrowserRouter([
     children: [
       {
         path: 'use-ref',
-        element: <UseRef />,
+        element: <UseRef />
       },
       {
         path: 'use-ref-with-dom',
-        element: <UseRefWithDom />,
+        element: <UseRefWithDom />
       },
       {
         path: 'use-context',
-        element: <UseContext />,
+        element: <UseContext />
       },
       {
         path: 'coins',
-        element: <Coins />,
+        element: <Coins />
       },
       {
         path: 'props',
-        element: <Props />,
+        element: <Props />
       },
       {
         path: 'forward-ref',
-        element: <ForwardRef />,
-      },
-    ],
-  },
+        element: <ForwardRef />
+      }
+    ]
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
