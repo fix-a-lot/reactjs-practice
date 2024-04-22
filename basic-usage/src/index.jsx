@@ -11,6 +11,7 @@ import Coins from './pages/coins';
 import UseContext from './pages/use-context';
 import Props from './pages/props';
 import ForwardRef from './pages/forward-ref';
+import InputCheckbox from './pages/input-checkbox';
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: 'forward-ref',
         element: <ForwardRef />
+      },
+      {
+        path: 'input-checkbox',
+        element: <InputCheckbox />
       }
     ]
   }

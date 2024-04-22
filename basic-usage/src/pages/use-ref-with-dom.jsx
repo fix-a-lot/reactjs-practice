@@ -8,6 +8,7 @@ export default function UseRefWithDom() {
     <article>
       <h2>useRef with DOM</h2>
       <input type="text" ref={myRef} />
+      &nbsp;
       <button onClick={focusInput}>focus input</button>
     </article>
   );

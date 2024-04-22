@@ -28,6 +28,9 @@ export default function Root() {
             <li>
               <Link to={`/forward-ref`}>forward-ref</Link>
             </li>
+            <li>
+              <Link to={`/input-checkbox`}>input-checkbox</Link>
+            </li>
           </ul>
         </nav>
       </header>

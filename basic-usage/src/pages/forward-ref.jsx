@@ -1,5 +1,5 @@
 import {forwardRef, useRef} from 'react';
-import styles from '../style/forward-ref.module.css';
+import styles from '../style/container.module.css';
 
 // 자식 컴포넌트
 const ChildComponent = forwardRef((props, ref) => {
@@ -22,7 +22,7 @@ export default function ForwardRef() {
 
   return (
     <div>
-      <h1>Parent Component</h1>
+      <h2>Parent Component</h2>
       <div className={styles.childContainer}>
         <ChildComponent ref={inputRef} />
       </div>

@@ -12,3 +12,7 @@ button {
   border-radius: 4px;
   cursor: pointer;
 }
+
+input {
+  padding: 10px 20px;
+}
