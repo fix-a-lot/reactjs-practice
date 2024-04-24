@@ -9,9 +9,10 @@ import UseRefWithDom from './pages/use-ref-with-dom';
 import UseRef from './pages/use-ref';
 import Coins from './pages/coins';
 import UseContext from './pages/use-context';
-import Props from './pages/props';
 import ForwardRef from './pages/forward-ref';
 import InputCheckbox from './pages/input-checkbox';
+import Props from './pages/props';
+import PropsWithRendering from './pages/props-with-rendering';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: 'props',
         element: <Props />
+      },
+      {
+        path: 'props-with-rendering',
+        element: <PropsWithRendering />
       },
       {
         path: 'forward-ref',

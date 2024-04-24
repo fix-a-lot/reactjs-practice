@@ -26,6 +26,9 @@ export default function Root() {
               <Link to={`/props`}>props</Link>
             </li>
             <li>
+              <Link to={`/props-with-rendering`}>props의 변화가 렌더링에 미치는 영향</Link>
+            </li>
+            <li>
               <Link to={`/forward-ref`}>forward-ref</Link>
             </li>
             <li>
