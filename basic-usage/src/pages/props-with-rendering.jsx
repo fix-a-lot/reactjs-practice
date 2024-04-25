@@ -61,7 +61,7 @@ export default function Props() {
 
   return (
     <article>
-      <h2>props의 변화가 렌더링에 미치는 영향</h2>
+      <h2>props의 변경이 렌더링에 미치는 영향</h2>
       <button onClick={changeValue1}>단순 변수 버전</button>
       <br />
       <button onClick={changeValue2}>useRef 버전</button>
@@ -77,15 +77,15 @@ export default function Props() {
       </p>
       <p>
         하지만 value4를 제외한 나머지는 부모 컴포넌트에서 state로 등록하지 않았기 때문에, 값의
-        변화가 렌더링을 유발하지 않으며, Child에서 props의 변화를 인지할 수 없다.
+        변경이 렌더링을 유발하지 않으며, Child에서 props의 변경을 인지할 수 없다.
       </p>
       <p>
         그나마 value2는 useRef로 저장해서 렌더링을 발생시키진 않지만, value4가 재랜더링을 유발하면
         그 때 값의 증가를 확인할 수 있긴 함.
       </p>
       <p>
-        그러니까 결론은, Child에서 상속받은 props가 변화하려면, 부모 컴포넌트에서 해당 값을 state로
-        등록하고 업데이트 함수로 상태를 변경해야 한다는 것.
+        그러니까 결론은, Child에서 상속받은 props의 변경을 인지하려면, 부모 컴포넌트에서 해당 값을
+        state로 등록하고 상태를 업데이트해야 한다는 것이다.
       </p>
     </article>
   );
