@@ -35,27 +35,27 @@ function Child({value1, value2, value3: inheritedValue3, value4}) {
 export default function Props() {
   console.log('Parent rendered');
 
-  let value1 = 'value1-init';
+  let value1 = 0;
   const changeValue1 = () => {
-    value1 = 'value1-changed';
+    value1 = ++value1;
     console.log('changeValue1 called');
   };
 
-  const value2 = useRef('value2-init');
+  const value2 = useRef(0);
   const changeValue2 = () => {
-    value2.current = 'value2-changed';
+    value2.current = ++value2.current;
     console.log('changeValue2 called');
   };
 
-  let value3 = 'value3-init';
+  let value3 = 0;
   const changeValue3 = () => {
-    value3 = 'value3-changed';
+    value3 = ++value3;
     console.log('changeValue3 called');
   };
 
-  const [value4, setValue4] = useState('value4-init');
+  const [value4, setValue4] = useState(0);
   const changeValue4 = () => {
-    setValue4('value4-changed');
+    setValue4(prev => ++prev);
     console.log('changeValue4 called');
   };
 
@@ -69,14 +69,23 @@ export default function Props() {
       <button onClick={changeValue3}>단순 변수 + Child에서 state 등록</button>
       <br />
       <button onClick={changeValue4}>단순 변수 + 부모 컴포넌트에서 state 등록</button>
-      <p>
-        위 버튼 둘 다 props로 상속시킨 값을 재할당하는 버튼이며, useEffect로 확인해보면 props가
-        변화함
-      </p>
       <Child value1={value1} value2={value2.current} value3={value3} value4={value4} />
+      <hr />
       <p>
-        하지만 Child에서 value1, value2, value3을 부모 컴포넌트에서 state로 등록하지 않았기 때문에
-        props가 변한 걸 인지하지 못함
+        위의 버튼들은 props로 상속시킨 값 0을 1씩 증가시키는 버튼이다. Child에서는 useEffect로 이를
+        확인하고 있다.
+      </p>
+      <p>
+        하지만 value4를 제외한 나머지는 부모 컴포넌트에서 state로 등록하지 않았기 때문에, 값의
+        변화가 렌더링을 유발하지 않으며, Child에서 props의 변화를 인지할 수 없다.
+      </p>
+      <p>
+        그나마 value2는 useRef로 저장해서 렌더링을 발생시키진 않지만, value4가 재랜더링을 유발하면
+        그 때 값의 증가를 확인할 수 있긴 함.
+      </p>
+      <p>
+        그러니까 결론은, Child에서 상속받은 props가 변화하려면, 부모 컴포넌트에서 해당 값을 state로
+        등록하고 업데이트 함수로 상태를 변경해야 한다는 것.
       </p>
     </article>
   );
