@@ -5,14 +5,15 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import './style/global.css';
 
 import Root from './pages/root';
-import UseRefWithDom from './pages/use-ref-with-dom';
-import UseRef from './pages/use-ref';
+import TestUseRefWithDom from './pages/test-use-ref-with-dom';
+import TestUseRef from './pages/test-use-ref';
 import Coins from './pages/coins';
-import UseContext from './pages/use-context';
+import TestUseContext from './pages/test-use-context';
 import ForwardRef from './pages/forward-ref';
 import InputCheckbox from './pages/input-checkbox';
 import Props from './pages/props';
 import PropsWithRendering from './pages/props-with-rendering';
+import TestUseEffect from './pages/test-use-effect';
 
 const router = createBrowserRouter([
   {
@@ -20,16 +21,20 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       {
+        path: 'use-effect',
+        element: <TestUseEffect />
+      },
+      {
         path: 'use-ref',
-        element: <UseRef />
+        element: <TestUseRef />
       },
       {
         path: 'use-ref-with-dom',
-        element: <UseRefWithDom />
+        element: <TestUseRefWithDom />
       },
       {
         path: 'use-context',
-        element: <UseContext />
+        element: <TestUseContext />
       },
       {
         path: 'coins',

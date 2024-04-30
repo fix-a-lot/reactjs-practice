@@ -1,6 +1,6 @@
 import {useRef} from 'react';
 
-export default function UseRefWithDom() {
+export default function TestUseRefWithDom() {
   const myRef = useRef(null);
   const focusInput = () => myRef.current.focus();
 

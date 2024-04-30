@@ -11,6 +11,9 @@ export default function Root() {
               <Link to={`/`}>home</Link>
             </li>
             <li>
+              <Link to={`/use-effect`}>useEffect</Link>
+            </li>
+            <li>
               <Link to={`/use-ref`}>useRef</Link>
             </li>
             <li>

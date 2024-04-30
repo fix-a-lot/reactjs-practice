@@ -1,7 +1,6 @@
 import {useRef, useState, useEffect} from 'react';
 
-export default function UseRef() {
-  console.log('UseRef render');
+export default function TestUseRef() {
   const refTest = useRef(null);
   const [value, setValue] = useState('');
 
