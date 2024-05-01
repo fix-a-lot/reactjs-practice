@@ -1,6 +1,6 @@
 // paragraph.jsx
 import {useContext} from 'react';
-import {Foo} from '../pages/test-use-context';
+import {Foo} from 'pages/test-use-context';
 
 export default function Paragraph() {
   const {count} = useContext(Foo);

@@ -1,5 +1,5 @@
 import {forwardRef, useRef} from 'react';
-import styles from '../style/container.module.css';
+import styles from 'style/container.module.css';
 
 // 자식 컴포넌트
 const ChildComponent = forwardRef((props, ref) => {

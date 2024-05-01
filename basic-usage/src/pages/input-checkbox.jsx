@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import styles from '../style/container.module.css';
+import styles from 'style/container.module.css';
 
 export default function InputCheckbox() {
   const [checked1, setChecked1] = useState(false);

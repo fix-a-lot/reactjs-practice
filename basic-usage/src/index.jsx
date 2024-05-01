@@ -7,13 +7,14 @@ import './style/global.css';
 import Root from './pages/root';
 import TestUseRefWithDom from './pages/test-use-ref-with-dom';
 import TestUseRef from './pages/test-use-ref';
-import Coins from './pages/coins';
+import Coins from './pages/etc/coins';
 import TestUseContext from './pages/test-use-context';
 import ForwardRef from './pages/forward-ref';
 import InputCheckbox from './pages/input-checkbox';
 import Props from './pages/props';
 import PropsWithRendering from './pages/props-with-rendering';
 import TestUseEffect from './pages/test-use-effect';
+import CustomHook from 'pages/custom-hook';
 
 const router = createBrowserRouter([
   {
@@ -33,11 +34,11 @@ const router = createBrowserRouter([
         element: <TestUseRefWithDom />
       },
       {
-        path: 'use-context',
+        path: 'test-use-context',
         element: <TestUseContext />
       },
       {
-        path: 'coins',
+        path: 'etc/coins',
         element: <Coins />
       },
       {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: 'input-checkbox',
         element: <InputCheckbox />
+      },
+      {
+        path: 'custom-hook',
+        element: <CustomHook />
       }
     ]
   }

@@ -20,10 +20,10 @@ export default function Root() {
               <Link to={`/use-ref-with-dom`}>useRef with DOM</Link>
             </li>
             <li>
-              <Link to={`/use-context`}>useContext</Link>
+              <Link to={`/test-use-context`}>useContext</Link>
             </li>
             <li>
-              <Link to={`/coins`}>coins</Link>
+              <Link to={`/etc/coins`}>coins</Link>
             </li>
             <li>
               <Link to={`/props`}>props</Link>
@@ -36,6 +36,9 @@ export default function Root() {
             </li>
             <li>
               <Link to={`/input-checkbox`}>input-checkbox</Link>
+            </li>
+            <li>
+              <Link to={`/custom-hook`}>custom-hook</Link>
             </li>
           </ul>
         </nav>
