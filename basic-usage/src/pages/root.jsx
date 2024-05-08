@@ -40,6 +40,9 @@ export default function Root() {
             <li>
               <Link to={`/custom-hook`}>custom-hook</Link>
             </li>
+            <li>
+              <Link to={`/test-use-memo`}>useMemo</Link>
+            </li>
           </ul>
         </nav>
       </header>

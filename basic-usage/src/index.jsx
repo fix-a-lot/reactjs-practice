@@ -15,6 +15,7 @@ import Props from './pages/props';
 import PropsWithRendering from './pages/props-with-rendering';
 import TestUseEffect from './pages/test-use-effect';
 import CustomHook from 'pages/custom-hook';
+import TestUseMemo from 'pages/test-use-memo';
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
       {
         path: 'custom-hook',
         element: <CustomHook />
+      },
+      {
+        path: 'test-use-memo',
+        element: <TestUseMemo />
       }
     ]
   }
