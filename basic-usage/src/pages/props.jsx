@@ -33,7 +33,7 @@ export default function Props() {
 
   return (
     <article>
-      <h2>props</h2>
+      <h2>props 테스트</h2>
       <Child value1={'값1-1'} value2={'값2-1'}>
         <p>Hello world!</p>
       </Child>

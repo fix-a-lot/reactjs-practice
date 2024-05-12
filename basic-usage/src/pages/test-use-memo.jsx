@@ -18,7 +18,7 @@ export default function TestUseMemo() {
 
   return (
     <article>
-      <h2>useMemo</h2>
+      <h2>useMemo 테스트</h2>
       <div>
         <input value={value1} onChange={e => setValue1(e.target.value)} />
         <input value={value2} onChange={e => setValue2(e.target.value)} />

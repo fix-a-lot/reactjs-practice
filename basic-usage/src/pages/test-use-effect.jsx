@@ -10,7 +10,7 @@ export default function TestUseEffect() {
 
   return (
     <article>
-      <h2>useEffect</h2>
+      <h2>useEffect 테스트</h2>
       <p>아무 값이나 설정한 state: {foo}</p>
       &nbsp;
       <button onClick={() => setFoo(prev => ++prev)}>+1</button>

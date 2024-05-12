@@ -5,7 +5,7 @@ import styles from 'style/container.module.css';
 const ChildComponent = forwardRef((props, ref) => {
   return (
     <div>
-      <h3>Child Component</h3>
+      <h4>Child Component</h4>
       <input type="text" ref={ref} />
     </div>
   );
@@ -22,7 +22,8 @@ export default function ForwardRef() {
 
   return (
     <div>
-      <h2>Parent Component</h2>
+      <h2>forwardRef 테스트: useRef를 자식 컴포넌트의 DOM과 연결하기</h2>
+      <h3>Parent Component</h3>
       <div className={styles.childContainer}>
         <ChildComponent ref={inputRef} />
       </div>

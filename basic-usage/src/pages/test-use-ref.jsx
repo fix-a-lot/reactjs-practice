@@ -14,7 +14,7 @@ export default function TestUseRef() {
 
   return (
     <article>
-      <h2>useRef</h2>
+      <h2>useRef 테스트</h2>
       <input
         type="text"
         autoFocus

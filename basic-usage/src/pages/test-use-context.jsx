@@ -10,7 +10,7 @@ export default function TestUseContext() {
   const increment = () => setCount(prev => prev + 1);
   return (
     <article>
-      <h2>useContext</h2>
+      <h2>useContext 테스트</h2>
       <Foo.Provider value={{count, increment}}>
         <div>
           <Button>이 버튼이나</Button>

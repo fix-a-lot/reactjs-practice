@@ -1,6 +1,9 @@
-import {Link, Outlet} from 'react-router-dom';
+import {Link, Outlet, useLocation, useResolvedPath} from 'react-router-dom';
 
 export default function Root() {
+  const {pathname} = useResolvedPath();
+  console.debug('resolvedPath.pathname:', pathname);
+
   return (
     <>
       <header>
@@ -8,28 +11,13 @@ export default function Root() {
         <nav>
           <ul>
             <li>
-              <Link to={`/`}>home</Link>
+              <Link to={`/`}>Home</Link>
             </li>
             <li>
-              <Link to={`/use-effect`}>useEffect</Link>
+              <Link to={`/etc/coins`}>Coins</Link>
             </li>
             <li>
-              <Link to={`/use-ref`}>useRef</Link>
-            </li>
-            <li>
-              <Link to={`/use-ref-with-dom`}>useRef with DOM</Link>
-            </li>
-            <li>
-              <Link to={`/test-use-context`}>useContext</Link>
-            </li>
-            <li>
-              <Link to={`/etc/coins`}>coins</Link>
-            </li>
-            <li>
-              <Link to={`/props`}>props</Link>
-            </li>
-            <li>
-              <Link to={`/props-with-rendering`}>props의 변화가 렌더링에 미치는 영향</Link>
+              <Link to={`/custom-hooks`}>Custom Hooks</Link>
             </li>
             <li>
               <Link to={`/forward-ref`}>forward-ref</Link>
@@ -38,18 +26,34 @@ export default function Root() {
               <Link to={`/input-checkbox`}>input-checkbox</Link>
             </li>
             <li>
-              <Link to={`/custom-hook`}>custom-hook</Link>
+              <Link to={`/props-with-rendering`}>props와 렌더링</Link>
+            </li>
+            <li>
+              <Link to={`/props`}>props</Link>
+            </li>
+            <li>
+              <Link to={`/test-use-context`}>useContext</Link>
+            </li>
+            <li>
+              <Link to={`/use-effect`}>useEffect</Link>
             </li>
             <li>
               <Link to={`/test-use-memo`}>useMemo</Link>
+            </li>
+            <li>
+              <Link to={`/use-ref-with-dom`}>useRef with DOM</Link>
+            </li>
+            <li>
+              <Link to={`/test-use-ref`}>useRef</Link>
+            </li>
+            <li>
+              <Link to={'/unified-use-state'}>Unified useState</Link>
             </li>
           </ul>
         </nav>
       </header>
       <hr />
-      <main id="detail">
-        <Outlet />
-      </main>
+      <main id="detail">{pathname === '/' ? <p>상단의 링크를 누르thㅔ요</p> : <Outlet />}</main>
     </>
   );
 }

@@ -20,7 +20,7 @@ export default function InputCheckbox() {
 
   return (
     <div>
-      <h2>Input: checkbox</h2>
+      <h2>리액트에서 체크박스는 어떻게 작동하는가?</h2>
       <div className={styles.childContainer} onClick={handleDivClick}>
         <input
           type="checkbox"

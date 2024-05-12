@@ -14,8 +14,9 @@ import InputCheckbox from './pages/input-checkbox';
 import Props from './pages/props';
 import PropsWithRendering from './pages/props-with-rendering';
 import TestUseEffect from './pages/test-use-effect';
-import CustomHook from 'pages/custom-hook';
+import CustomHooks from 'pages/custom-hooks';
 import TestUseMemo from 'pages/test-use-memo';
+import UnifiedUseState from 'pages/unified-use-state';
 
 const router = createBrowserRouter([
   {
@@ -23,32 +24,12 @@ const router = createBrowserRouter([
     element: <Root />,
     children: [
       {
-        path: 'use-effect',
-        element: <TestUseEffect />
-      },
-      {
-        path: 'use-ref',
-        element: <TestUseRef />
-      },
-      {
-        path: 'use-ref-with-dom',
-        element: <TestUseRefWithDom />
-      },
-      {
-        path: 'test-use-context',
-        element: <TestUseContext />
-      },
-      {
         path: 'etc/coins',
         element: <Coins />
       },
       {
-        path: 'props',
-        element: <Props />
-      },
-      {
-        path: 'props-with-rendering',
-        element: <PropsWithRendering />
+        path: 'custom-hooks',
+        element: <CustomHooks />
       },
       {
         path: 'forward-ref',
@@ -59,12 +40,36 @@ const router = createBrowserRouter([
         element: <InputCheckbox />
       },
       {
-        path: 'custom-hook',
-        element: <CustomHook />
+        path: 'props-with-rendering',
+        element: <PropsWithRendering />
+      },
+      {
+        path: 'props',
+        element: <Props />
+      },
+      {
+        path: 'test-use-context',
+        element: <TestUseContext />
+      },
+      {
+        path: 'use-effect',
+        element: <TestUseEffect />
       },
       {
         path: 'test-use-memo',
         element: <TestUseMemo />
+      },
+      {
+        path: 'use-ref-with-dom',
+        element: <TestUseRefWithDom />
+      },
+      {
+        path: 'test-use-ref',
+        element: <TestUseRef />
+      },
+      {
+        path: 'unified-use-state',
+        element: <UnifiedUseState />
       }
     ]
   }

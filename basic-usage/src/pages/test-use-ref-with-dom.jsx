@@ -6,7 +6,7 @@ export default function TestUseRefWithDom() {
 
   return (
     <article>
-      <h2>useRef with DOM</h2>
+      <h2>useRef를 DOM 객체와 연결하기</h2>
       <input type="text" ref={myRef} />
       &nbsp;
       <button onClick={focusInput}>focus input</button>
