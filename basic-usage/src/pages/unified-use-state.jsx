@@ -4,15 +4,29 @@ export default function UnifiedUseState() {
   const [values, setValues] = useState({
     value1: '',
     value2: '',
-    value3: ''
+    value3: false,
+    value4: ''
   });
 
-  const handleValuesChange = (name, value) => {
+  const reset = () => {
+    setValues({
+      value1: '',
+      value2: '',
+      value3: false,
+      value4: ''
+    });
+  };
+
+  const handleValueChange = (name, value) => {
     setValues(prev => ({...prev, [name]: value}));
   };
 
+  const handleCheckboxChange = name => {
+    setValues(prev => ({...prev, [name]: !prev[name]})); // 체크박스 값 토글
+  };
+
   useEffect(() => {
-    console.log('values:', values);
+    console.debug('values:', values);
   }, [values]);
 
   return (
@@ -20,21 +34,63 @@ export default function UnifiedUseState() {
       <h2>하나의 객체로 여러 상태를 관리하는 방법</h2>
       <div>
         <span>value1: </span>
-        <input values={values} onChange={e => handleValuesChange('value1', e.target.value)} />
-        <br />
+        <input
+          type="text"
+          value={values.value1}
+          onChange={e => handleValueChange('value1', e.target.value)}
+        />
+        <hr />
         <span>value2: </span>
-        <input values={values} onChange={e => handleValuesChange('value2', e.target.value)} />
-        <br />
+        <label>
+          <input
+            type="radio"
+            name="value2"
+            value="option1"
+            checked={values.value2 === 'option1'}
+            onChange={e => handleValueChange('value2', e.target.value)}
+          />
+          &nbsp;option1
+        </label>
+        &nbsp;&nbsp;
+        <label>
+          <input
+            type="radio"
+            name="value2"
+            value="option2"
+            checked={values.value2 === 'option2'}
+            onChange={e => handleValueChange('value2', e.target.value)}
+          />
+          &nbsp;option2
+        </label>
+        &nbsp;&nbsp;
+        <hr />
         <span>value3: </span>
-        <input values={values} onChange={e => handleValuesChange('value3', e.target.value)} />
-        <br />
+        <label>
+          <input
+            type="checkbox"
+            checked={values.value3}
+            onChange={() => handleCheckboxChange('value3')}
+          />
+          &nbsp;true
+        </label>
+        <hr />
+        <span>value4: </span>
+        <select value={values.value4} onChange={e => handleValueChange('value4', e.target.value)}>
+          <option value="">선택</option>
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+        <hr />
         <ul>
           {Object.keys(values).map(key => (
             <li key={key}>
-              {key}: {values[key]}
+              {key}: {String(values[key])}
             </li>
           ))}
         </ul>
+        <br />
+        <button onClick={reset}>RESET</button>
       </div>
     </article>
   );
