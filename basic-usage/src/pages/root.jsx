@@ -41,6 +41,12 @@ export default function Root() {
               <Link to={`/test-use-memo`}>useMemo</Link>
             </li>
             <li>
+              <Link to={`/test-use-reducer-1`}>useReducer #1</Link>
+            </li>
+            <li>
+              <Link to={`/test-use-reducer-2`}>useReducer #2</Link>
+            </li>
+            <li>
               <Link to={`/use-ref-with-dom`}>useRef with DOM</Link>
             </li>
             <li>

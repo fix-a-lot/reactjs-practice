@@ -17,6 +17,8 @@ import TestUseEffect from './pages/test-use-effect';
 import CustomHooks from 'pages/custom-hooks';
 import TestUseMemo from 'pages/test-use-memo';
 import UnifiedUseState from 'pages/unified-use-state';
+import TestUseReducer2 from 'pages/test-use-reducer-2';
+import TestUseReducer1 from 'pages/test-use-reducer-1';
 
 const router = createBrowserRouter([
   {
@@ -58,6 +60,14 @@ const router = createBrowserRouter([
       {
         path: 'test-use-memo',
         element: <TestUseMemo />
+      },
+      {
+        path: 'test-use-reducer-1',
+        element: <TestUseReducer1 />
+      },
+      {
+        path: 'test-use-reducer-2',
+        element: <TestUseReducer2 />
       },
       {
         path: 'use-ref-with-dom',
