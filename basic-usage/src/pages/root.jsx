@@ -11,49 +11,52 @@ export default function Root() {
         <nav>
           <ul>
             <li>
-              <Link to={`/`}>Home</Link>
+              <Link to={'/'}>Home</Link>
             </li>
             <li>
-              <Link to={`/etc/coins`}>Coins</Link>
+              <Link to={'/etc/coins'}>Coins</Link>
             </li>
             <li>
-              <Link to={`/custom-hooks`}>Custom Hooks</Link>
+              <Link to={'/hooks/custom-hooks'}>Custom Hooks</Link>
             </li>
             <li>
-              <Link to={`/forward-ref`}>forward-ref</Link>
+              <Link to={'/hooks/forward-ref'}>forward-ref</Link>
             </li>
             <li>
-              <Link to={`/input-checkbox`}>input-checkbox</Link>
+              <Link to={'/tags/input-checkbox'}>input-checkbox</Link>
             </li>
             <li>
-              <Link to={`/props-with-rendering`}>props와 렌더링</Link>
+              <Link to={'/props/props-with-rendering'}>props와 렌더링</Link>
             </li>
             <li>
-              <Link to={`/props`}>props</Link>
+              <Link to={'/props/props'}>props</Link>
             </li>
             <li>
-              <Link to={`/test-use-context`}>useContext</Link>
+              <Link to={'/etc/scratch-pad'}>scratch-pad</Link>
             </li>
             <li>
-              <Link to={`/use-effect`}>useEffect</Link>
+              <Link to={'/hooks/test-use-context'}>useContext</Link>
             </li>
             <li>
-              <Link to={`/test-use-memo`}>useMemo</Link>
+              <Link to={'/hooks/use-effect'}>useEffect</Link>
             </li>
             <li>
-              <Link to={`/test-use-reducer-1`}>useReducer #1</Link>
+              <Link to={'/hooks/test-use-memo'}>useMemo</Link>
             </li>
             <li>
-              <Link to={`/test-use-reducer-2`}>useReducer #2</Link>
+              <Link to={'/hooks/test-use-reducer-1'}>useReducer #1</Link>
             </li>
             <li>
-              <Link to={`/use-ref-with-dom`}>useRef with DOM</Link>
+              <Link to={'/hooks/test-use-reducer-2'}>useReducer #2</Link>
             </li>
             <li>
-              <Link to={`/test-use-ref`}>useRef</Link>
+              <Link to={'/hooks/use-ref-with-dom'}>useRef with DOM</Link>
             </li>
             <li>
-              <Link to={'/unified-use-state'}>Unified useState</Link>
+              <Link to={'/hooks/test-use-ref'}>useRef</Link>
+            </li>
+            <li>
+              <Link to={'/hooks/unified-use-state'}>Unified useState</Link>
             </li>
           </ul>
         </nav>

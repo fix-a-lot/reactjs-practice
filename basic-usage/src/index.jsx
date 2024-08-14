@@ -5,20 +5,21 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import './style/global.css';
 
 import Root from './pages/root';
-import TestUseRefWithDom from './pages/test-use-ref-with-dom';
-import TestUseRef from './pages/test-use-ref';
+import TestUseRefWithDom from './pages/hooks/test-use-ref-with-dom';
+import TestUseRef from './pages/hooks/test-use-ref';
 import Coins from './pages/etc/coins';
-import TestUseContext from './pages/test-use-context';
-import ForwardRef from './pages/forward-ref';
-import InputCheckbox from './pages/input-checkbox';
-import Props from './pages/props';
-import PropsWithRendering from './pages/props-with-rendering';
-import TestUseEffect from './pages/test-use-effect';
-import CustomHooks from 'pages/custom-hooks';
-import TestUseMemo from 'pages/test-use-memo';
-import UnifiedUseState from 'pages/unified-use-state';
-import TestUseReducer2 from 'pages/test-use-reducer-2';
-import TestUseReducer1 from 'pages/test-use-reducer-1';
+import TestUseContext from './pages/hooks/test-use-context';
+import ForwardRef from './pages/hooks/forward-ref';
+import InputCheckbox from './pages/tags/input-checkbox';
+import Props from './pages/props/props';
+import PropsWithRendering from './pages/props/props-with-rendering';
+import TestUseEffect from './pages/hooks/test-use-effect';
+import CustomHooks from 'pages/hooks/custom-hooks';
+import TestUseMemo from 'pages/hooks/test-use-memo';
+import UnifiedUseState from 'pages/hooks/unified-use-state';
+import TestUseReducer2 from 'pages/hooks/test-use-reducer-2';
+import TestUseReducer1 from 'pages/hooks/test-use-reducer-1';
+import ScratchPad from 'pages/etc/scratch-pad';
 
 const router = createBrowserRouter([
   {
@@ -30,55 +31,59 @@ const router = createBrowserRouter([
         element: <Coins />
       },
       {
-        path: 'custom-hooks',
+        path: 'hooks/custom-hooks',
         element: <CustomHooks />
       },
       {
-        path: 'forward-ref',
+        path: 'hooks/forward-ref',
         element: <ForwardRef />
       },
       {
-        path: 'input-checkbox',
+        path: 'tags/input-checkbox',
         element: <InputCheckbox />
       },
       {
-        path: 'props-with-rendering',
+        path: 'props/props-with-rendering',
         element: <PropsWithRendering />
       },
       {
-        path: 'props',
+        path: 'props/props',
         element: <Props />
       },
       {
-        path: 'test-use-context',
+        path: 'etc/scratch-pad',
+        element: <ScratchPad />
+      },
+      {
+        path: 'hooks/test-use-context',
         element: <TestUseContext />
       },
       {
-        path: 'use-effect',
+        path: 'hooks/use-effect',
         element: <TestUseEffect />
       },
       {
-        path: 'test-use-memo',
+        path: 'hooks/test-use-memo',
         element: <TestUseMemo />
       },
       {
-        path: 'test-use-reducer-1',
+        path: 'hooks/test-use-reducer-1',
         element: <TestUseReducer1 />
       },
       {
-        path: 'test-use-reducer-2',
+        path: 'hooks/test-use-reducer-2',
         element: <TestUseReducer2 />
       },
       {
-        path: 'use-ref-with-dom',
+        path: 'hooks/use-ref-with-dom',
         element: <TestUseRefWithDom />
       },
       {
-        path: 'test-use-ref',
+        path: 'hooks/test-use-ref',
         element: <TestUseRef />
       },
       {
-        path: 'unified-use-state',
+        path: 'hooks/unified-use-state',
         element: <UnifiedUseState />
       }
     ]
