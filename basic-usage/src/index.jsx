@@ -20,6 +20,7 @@ import UnifiedUseState from 'pages/hooks/unified-use-state';
 import TestUseReducer2 from 'pages/hooks/test-use-reducer-2';
 import TestUseReducer1 from 'pages/hooks/test-use-reducer-1';
 import ScratchPad from 'pages/etc/scratch-pad';
+import TestUseCallback from 'pages/hooks/test-use-callback';
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: 'etc/scratch-pad',
         element: <ScratchPad />
+      },
+      {
+        path: 'hooks/test-use-callback',
+        element: <TestUseCallback />
       },
       {
         path: 'hooks/test-use-context',

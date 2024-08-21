@@ -35,6 +35,9 @@ export default function Root() {
               <Link to={'/etc/scratch-pad'}>scratch-pad</Link>
             </li>
             <li>
+              <Link to={`/hooks/test-use-callback`}>useCallback</Link>
+            </li>
+            <li>
               <Link to={'/hooks/test-use-context'}>useContext</Link>
             </li>
             <li>
