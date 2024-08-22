@@ -22,6 +22,9 @@ import UseReducer1 from './pages/hooks/use-reducer-1';
 import ScratchPad from './pages/etc/scratch-pad';
 import UseCallback from './pages/hooks/use-callback';
 import ReactRouterHooks from './pages/third-party/react-router/react-router-hooks';
+import TestDayjs from './pages/third-party/dayjs/test-dayjs';
+import TestDatePicker from './pages/third-party/mui/test-x-date-picker';
+import Validation from './pages/third-party/react-hook-form/validation';
 
 const router = createBrowserRouter([
   {
@@ -95,6 +98,18 @@ const router = createBrowserRouter([
       {
         path: '/third-party/react-router/react-router-hooks/:lastPath',
         element: <ReactRouterHooks />
+      },
+      {
+        path: '/third-party/dayjs/dayjs',
+        element: <TestDayjs />
+      },
+      {
+        path: 'third-party/mui-x/date-picker',
+        element: <TestDatePicker />
+      },
+      {
+        path: 'third-party/react-hook-form/validation',
+        element: <Validation />
       }
     ]
   }

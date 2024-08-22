@@ -1,3 +1,5 @@
+import {ReactNode} from 'react';
+
 function Child({value1, value2, children}) {
   return (
     <div>
@@ -9,7 +11,11 @@ function Child({value1, value2, children}) {
   );
 }
 
-function SecondChild(props) {
+function SecondChild(props: {
+  value1: string;
+  value2: string;
+  children: ReactNode;
+}) {
   return (
     <div>
       <h3>SecondChild</h3>

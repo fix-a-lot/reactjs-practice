@@ -10,7 +10,7 @@ export default function Root() {
         <h1>React Practice With TypeScript</h1>
       </header>
       <main id="detail">
-        <aside>
+        <nav>
           <p>React Basic Usages</p>
           <ul>
             <li>
@@ -69,8 +69,24 @@ export default function Root() {
           <ul>
             <li><Link to={'/third-party/react-router/react-router-hooks/foo?bar=123'}>React Router's hooks</Link></li>
           </ul>
-        </aside>
-        <article>{pathname === '/' ? <p>상단의 링크를 누르thㅔ요</p> : <Outlet />}</article>
+          <p>dayjs</p>
+          <ul>
+            <li>
+              <Link to={'/third-party/dayjs/dayjs'}>dayjs</Link>
+            </li>
+          </ul>
+          <p>MUI X</p>
+          <ul>
+            <li>
+              <Link to={'/third-party/mui-x/date-picker'}>DatePicker</Link>
+            </li>
+          </ul>
+          <p>React Hook Form</p>
+          <ul>
+            <li><Link to={'/third-party/react-hook-form/validation'}>Validation</Link></li>
+          </ul>
+        </nav>
+        <article>{pathname === '/' ? <p>좌측의 링크를 누르thㅔ요</p> : <Outlet />}</article>
       </main>
     </>
   );
