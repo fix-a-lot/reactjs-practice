@@ -7,7 +7,7 @@ import {SubmitHandler, useForm} from 'react-hook-form';
 type Inputs = {
   name: string;
   birthDate: string;
-  gender: string;
+  gender: number;
   phoneNo: string;
 };
 
@@ -26,7 +26,7 @@ export default function Validation() {
     reset({
       name: '',
       birthDate: '',
-      gender: '0',
+      gender: 0,
       phoneNo: ''
     });
   }
@@ -87,12 +87,12 @@ export default function Validation() {
                 <th>성별</th>
                 <td>
                   <label>
-                    <input type="radio" value={'1'} {...register('gender')} />
+                    <input type="radio" value={1} {...register('gender')} />
                     &nbsp;여성
                   </label>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                   <label>
-                    <input type="radio" value={'0'} {...register('gender')} />
+                    <input type="radio" value={0} {...register('gender')} />
                     &nbsp;남성
                   </label>
                 </td>
