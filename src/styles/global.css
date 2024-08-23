@@ -35,10 +35,26 @@ main {
 nav {
   border-right: 1px solid #e6e6e6;
   padding: 10px;
+  min-width: 200px;
 }
 
 article {
+  width: 100%;
   padding: 10px;
+}
+
+h1 {
+  font-size: 2.3rem;
+}
+h2 {
+  font-size: 1.8rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+h3 {
+  font-size: 1.4rem
+}
+h4, h5, h6, p {
+  font-size: 1rem
 }
 
 button {
@@ -54,4 +70,40 @@ button {
 select,
 input {
   padding: 10px 20px;
+}
+
+.code-wrapper {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #c3d4d5;
+  border: rgba(0, 0, 0, 0.082) 1px solid;
+  border-radius: 3px;
+  display: block;
+  min-height: 20px;
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+.code-result {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #eaf2f3;
+  border: rgba(0, 0, 0, 0.082) 1px solid;
+  border-radius: 3px;
+  display: block;
+  min-height: 20px;
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+.important {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #e5f3fe;
+  border: rgba(0, 0, 0, 0.082) 1px solid;
+  border-radius: 3px;
+  display: block;
+  min-height: 20px;
+  padding: 8px 12px;
+  text-decoration: none;
 }

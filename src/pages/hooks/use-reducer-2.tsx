@@ -23,7 +23,7 @@ export default function UseReducer2() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <article>
+    <section>
       <h2>useReducer 테스트 #2</h2>
       <p>객체 타입의 상태 관리하기</p>
       <div>
@@ -53,6 +53,6 @@ export default function UseReducer2() {
         <p>Name: {state.name}</p>
         <p>Age: {state.age}</p>
       </div>
-    </article>
+    </section>
   );
 }

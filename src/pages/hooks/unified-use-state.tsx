@@ -30,7 +30,7 @@ export default function UnifiedUseState() {
   }, [values]);
 
   return (
-    <article>
+    <section>
       <h2>하나의 객체로 여러 상태를 관리하는 방법</h2>
       <div>
         <span>value1: </span>
@@ -92,6 +92,6 @@ export default function UnifiedUseState() {
         <br />
         <button onClick={reset}>RESET</button>
       </div>
-    </article>
+    </section>
   );
 }

@@ -7,9 +7,9 @@ export default function ReactRouterHooks() {
   const [searchParams] = useSearchParams();
 
   return (
-    <>
+    <section>
       <p>bar: {searchParams.get('bar')}</p>
       <p>lastPath: {lastPath}</p>
-    </>
+    </section>
   )
 }

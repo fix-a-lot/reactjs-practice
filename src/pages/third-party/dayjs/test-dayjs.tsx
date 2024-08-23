@@ -16,12 +16,12 @@ export default function TestDayjs() {
   };
 
   return (
-    <div>
+    <section>
       <button onClick={handleClickButton1}>버튼1</button>
       <p>결과1: {r1}</p>
       <p>결과2: {r2}</p>
       <p>결과3: {r3}</p>
       <p>결과4: {r4}</p>
-    </div>
+    </section>
   );
 }

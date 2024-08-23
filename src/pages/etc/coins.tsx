@@ -12,7 +12,7 @@ export default function Coins() {
       });
   }, []);
   return (
-    <article>
+    <section>
       <h2>니꼴라스와 만들어 본 코인 목록 그리기</h2>
       <p>{coins.length}</p>
       {
@@ -29,7 +29,7 @@ export default function Coins() {
           </select>
         )
       }
-    </article>
+    </section>
   );
 }
 

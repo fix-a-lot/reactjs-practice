@@ -5,11 +5,11 @@ export default function UseRefWithDom() {
   const focusInput = () => myRef.current.focus();
 
   return (
-    <article>
+    <section>
       <h2>useRef를 DOM 객체와 연결하기</h2>
       <input type="text" ref={myRef} />
       &nbsp;
       <button onClick={focusInput}>focus input</button>
-    </article>
+    </section>
   );
 }

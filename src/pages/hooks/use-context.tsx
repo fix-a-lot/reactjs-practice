@@ -18,7 +18,7 @@ export default function UseContext() {
   }
 
   return (
-    <article>
+    <section>
       <h2>useContext 테스트</h2>
       <Foo.Provider value={{count, increment}}>
         <div>
@@ -32,6 +32,6 @@ export default function UseContext() {
         </div>
       </Foo.Provider>
       <Button>여긴 안됨</Button>
-    </article>
+    </section>
   );
 }

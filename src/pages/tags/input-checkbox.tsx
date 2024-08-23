@@ -19,7 +19,7 @@ export default function InputCheckbox() {
   };
 
   return (
-    <div>
+    <section>
       <h2>리액트에서 체크박스는 어떻게 작동하는가?</h2>
       <div className={styles.childContainer} onClick={handleDivClick}>
         <input
@@ -36,6 +36,6 @@ export default function InputCheckbox() {
       <p>
         checked2: <strong>{checked2 ? 'true' : 'false'}</strong>
       </p>
-    </div>
+    </section>
   );
 }

@@ -22,13 +22,13 @@ function Child({value1, value2, value3: inheritedValue3, value4}) {
   const [value3] = useState(inheritedValue3);
 
   return (
-    <div>
+    <section>
       <h3>Child</h3>
       <p>value1: {value1}</p>
       <p>value2: {value2}</p>
       <p>value3: {value3}</p>
       <p>value4: {value4}</p>
-    </div>
+    </section>
   );
 }
 

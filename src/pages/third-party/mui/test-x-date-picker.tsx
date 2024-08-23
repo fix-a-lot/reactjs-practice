@@ -3,7 +3,7 @@
  */
 import {useState} from 'react';
 import dayjs from 'dayjs';
-import CustomDatePicker from './custom-date-picker';
+import CustomDatePicker from '../../../components/custom-date-picker';
 
 export default function TestXDatePicker() {
   const [r1, setR1] = useState(null);
@@ -25,7 +25,7 @@ export default function TestXDatePicker() {
   };
 
   return (
-    <>
+    <section>
       <div>
         <button onClick={handleClickButton1}>버튼1</button>
         결과1: <CustomDatePicker value={r1} onChange={setR1} />
@@ -42,6 +42,6 @@ export default function TestXDatePicker() {
         <button onClick={handleClickButton4}>버튼4</button>
         결과4: <CustomDatePicker value={r4} onChange={setR4} />
       </div>
-    </>
+    </section>
   );
 }

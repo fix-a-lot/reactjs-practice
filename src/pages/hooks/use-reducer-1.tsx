@@ -15,13 +15,13 @@ export default function UseReducer1() {
   const [state, dispatch] = useReducer(reducer, {count: 0});
 
   return (
-    <article>
+    <section>
       <h2>useReducer 테스트 #1</h2>
       <p>일반적인 사용법</p>
       <p>state.count: {state.count}</p>
       <button onClick={() => dispatch({type: 'increment'})}>Increment</button>
       <br />
       <button onClick={() => dispatch({type: 'decrement'})}>Decrement</button>
-    </article>
+    </section>
   );
 }

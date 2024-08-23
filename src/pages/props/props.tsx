@@ -38,7 +38,7 @@ export default function Props() {
   console.log('Parent rendered');
 
   return (
-    <article>
+    <section>
       <h2>props 테스트</h2>
       <Child value1={'값1-1'} value2={'값2-1'}>
         <p>Hello world!</p>
@@ -46,6 +46,6 @@ export default function Props() {
       <SecondChild value1={'값1-2'} value2={'값2-2'}>
         <p>Hello world too!</p>
       </SecondChild>
-    </article>
+    </section>
   );
 }

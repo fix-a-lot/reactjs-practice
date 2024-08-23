@@ -13,7 +13,7 @@ export default function UseRef() {
   console.log(refTest.current); // 첫 렌더링엔 null, 이후 사용자 입력이 발생하면 123 출력됨
 
   return (
-    <article>
+    <section>
       <h2>useRef 테스트</h2>
       <input
         type="text"
@@ -22,6 +22,6 @@ export default function UseRef() {
         onChange={onChange}
         placeholder="아무거나 입력하세요"
       />
-    </article>
+    </section>
   );
 }

@@ -19,7 +19,7 @@ export default function UseEffect() {
   }, [foo]);
 
   return (
-    <article>
+    <section>
       <h2>useEffect 테스트</h2>
       <p>아무 값이나 설정한 state: {foo}</p>
       <button onClick={() => setRefresh(prev => !prev)}>Paragraph show toggle</button>
@@ -32,6 +32,6 @@ export default function UseEffect() {
         useEffect의 정리 코드(cleanup code)는 컴포넌트가 dismount 될 때 실행되지만, state가 변경되어
         리렌더링되는 시점에도 실행된다.
       </p>
-    </article>
+    </section>
   );
 }

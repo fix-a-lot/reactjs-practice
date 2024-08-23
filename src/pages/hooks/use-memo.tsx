@@ -17,7 +17,7 @@ export default function UseMemo() {
   };
 
   return (
-    <article>
+    <section>
       <h2>useMemo 테스트</h2>
       <div>
         <input value={value1} onChange={e => setValue1(e.target.value)} />
@@ -25,6 +25,6 @@ export default function UseMemo() {
         <p>{cachedValue}</p>
       </div>
       <button onClick={rerender}>리렌더링</button>
-    </article>
+    </section>
   );
 }
