@@ -17,6 +17,7 @@ export default function TestDayjs() {
 
   return (
     <section>
+      <h2>Day.js 테스트</h2>
       <button onClick={handleClickButton1}>버튼1</button>
       <p>결과1: {r1}</p>
       <p>결과2: {r2}</p>

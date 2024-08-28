@@ -10,7 +10,7 @@ export const Foo = createContext<{
   increment?: () => void;
 }>({});
 
-export default function UseContext() {
+export default function UseContextTest() {
   const [count, setCount] = useState(0);
 
   function increment() {

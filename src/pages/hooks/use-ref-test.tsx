@@ -1,6 +1,6 @@
 import {useRef, useState, useEffect} from 'react';
 
-export default function UseRef() {
+export default function UseRefTest() {
   const refTest = useRef(null);
   const [value, setValue] = useState('');
 

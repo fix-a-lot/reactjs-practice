@@ -3,7 +3,7 @@
  */
 
 import {ReactNode, useContext} from 'react';
-import {Foo} from '../pages/hooks/use-context';
+import {Foo} from '../pages/hooks/use-context-test';
 
 export default function Button({children}: {children: ReactNode}) {
   const {increment} = useContext(Foo);

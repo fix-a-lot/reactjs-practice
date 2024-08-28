@@ -26,6 +26,7 @@ export default function TestXDatePicker() {
 
   return (
     <section>
+      <h2>MUI X Date Picker 테스트</h2>
       <div>
         <button onClick={handleClickButton1}>버튼1</button>
         결과1: <CustomDatePicker value={r1} onChange={setR1} />

@@ -2,21 +2,26 @@ import {useEffect, useState} from 'react';
 
 const Paragraph = () => {
   useEffect(() => {
-    console.log('Paragraph rendered');
-    return () => console.log('Paragraph unmounted');
+    console.log('🚀 Paragraph');
+    return () => console.log('🧹 Paragraph');
   }, []);
 
   return <p>보이나요</p>;
 };
 
-export default function UseEffect() {
+export default function UseEffectTest() {
   const [foo, setFoo] = useState(0);
   const [refresh, setRefresh] = useState(true);
 
   useEffect(() => {
-    console.log('Hello world!');
-    return () => console.log('Goodbye world!');
+    console.log('🚀 depends on foo UseEffect');
+    return () => console.log('🧹 depends on foo UseEffect');
   }, [foo]);
+
+  useEffect(() => {
+    console.log('🚀 no dependency UseEffect');
+    return () => console.log('🧹 no dependency UseEffect');
+  }, [])
 
   return (
     <section>

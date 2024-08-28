@@ -6,21 +6,21 @@ import './styles/global.css';
 
 import Root from './pages/root';
 import UseRefWithDom from './pages/hooks/use-ref-with-dom';
-import UseRef from './pages/hooks/use-ref';
+import UseRefTest from './pages/hooks/use-ref-test';
 import Coins from './pages/etc/coins';
-import UseContext from './pages/hooks/use-context';
-import ForwardRef from './pages/hooks/forward-ref';
+import UseContextTest from './pages/hooks/use-context-test';
+import ForwardRefTest from './pages/hooks/forward-ref-test';
 import InputCheckbox from './pages/tags/input-checkbox';
-import Props from './pages/props/props';
+import PropsTest from './pages/props/props-test';
 import PropsWithRendering from './pages/props/props-with-rendering';
-import UseEffect from './pages/hooks/use-effect';
+import UseEffectTest from './pages/hooks/use-effect-test';
 import CustomHooks from './pages/hooks/custom-hooks';
-import UseMemo from './pages/hooks/use-memo';
+import UseMemoTest from './pages/hooks/use-memo-test';
 import UnifiedUseState from './pages/hooks/unified-use-state';
-import UseReducer2 from './pages/hooks/use-reducer-2';
-import UseReducer1 from './pages/hooks/use-reducer-1';
+import UseReducerTest2 from './pages/hooks/use-reducer-test2';
+import UseReducerTest1 from './pages/hooks/use-reducer-test1';
 import ScratchPad from './pages/etc/scratch-pad';
-import UseCallback from './pages/hooks/use-callback';
+import UseCallbackTest from './pages/hooks/use-callback-test';
 import ReactRouterHooks from './pages/third-party/react-router/react-router-hooks';
 import TestDayjs from './pages/third-party/dayjs/test-dayjs';
 import TestDatePicker from './pages/third-party/mui/test-x-date-picker';
@@ -40,8 +40,8 @@ const router = createBrowserRouter([
         element: <CustomHooks />
       },
       {
-        path: 'hooks/forward-ref',
-        element: <ForwardRef />
+        path: 'hooks/forward-ref-test',
+        element: <ForwardRefTest />
       },
       {
         path: 'tags/input-checkbox',
@@ -52,44 +52,44 @@ const router = createBrowserRouter([
         element: <PropsWithRendering />
       },
       {
-        path: 'props/props',
-        element: <Props />
+        path: 'props/props-test',
+        element: <PropsTest />
       },
       {
         path: 'etc/scratch-pad',
         element: <ScratchPad />
       },
       {
-        path: 'hooks/use-callback',
-        element: <UseCallback />
+        path: 'hooks/use-callback-test',
+        element: <UseCallbackTest />
       },
       {
-        path: 'hooks/use-context',
-        element: <UseContext />
+        path: 'hooks/use-context-test',
+        element: <UseContextTest />
       },
       {
-        path: 'hooks/use-effect',
-        element: <UseEffect />
+        path: 'hooks/use-effect-test',
+        element: <UseEffectTest />
       },
       {
-        path: 'hooks/use-memo',
-        element: <UseMemo />
+        path: 'hooks/use-memo-test',
+        element: <UseMemoTest />
       },
       {
-        path: 'hooks/use-reducer-1',
-        element: <UseReducer1 />
+        path: 'hooks/use-reducer-test-1',
+        element: <UseReducerTest1 />
       },
       {
-        path: 'hooks/use-reducer-2',
-        element: <UseReducer2 />
+        path: 'hooks/use-reducer-test-2',
+        element: <UseReducerTest2 />
       },
       {
         path: 'hooks/use-ref-with-dom',
         element: <UseRefWithDom />
       },
       {
-        path: 'hooks/use-ref',
-        element: <UseRef />
+        path: 'hooks/use-ref-test',
+        element: <UseRefTest />
       },
       {
         path: 'hooks/unified-use-state',

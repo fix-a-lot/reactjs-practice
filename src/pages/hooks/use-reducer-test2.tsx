@@ -19,7 +19,7 @@ function reducer(state, action) {
   }
 }
 
-export default function UseReducer2() {
+export default function UseReducerTest2() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (

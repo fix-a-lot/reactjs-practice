@@ -1,7 +1,7 @@
 import {useMemo, useState} from 'react';
 
-export default function UseMemo() {
-  console.log('UseMemo 렌더링됨');
+export default function UseMemoTest() {
+  console.log('UseMemoTest 렌더링됨');
   const [value1, setValue1] = useState('');
   const [value2, setValue2] = useState('');
   const [value3, setValue3] = useState(0);

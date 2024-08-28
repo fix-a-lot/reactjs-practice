@@ -13,7 +13,7 @@ const ChildComponent = forwardRef<HTMLInputElement, any>((props, ref: ForwardedR
 // ChildComponent.displayName = 'ChildComponent';
 
 // 부모 컴포넌트
-export default function ForwardRef() {
+export default function ForwardRefTest() {
   const inputRef = useRef(null);
 
   const handleClick = () => {

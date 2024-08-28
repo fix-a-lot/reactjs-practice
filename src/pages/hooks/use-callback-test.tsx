@@ -4,7 +4,7 @@
 
 import {useCallback, useEffect, useRef, useState} from 'react';
 
-export default function UseCallback() {
+export default function UseCallbackTest() {
   const [foo, setFoo] = useState('');
   const [refresh, setRefresh] = useState(true);
 
@@ -24,7 +24,7 @@ export default function UseCallback() {
   return (
     <>
       <section>
-        <h2>useCallback</h2>
+        <h2>useCallback 테스트</h2>
         <section>
           <h3>test #1</h3>
           <div className="code-result">

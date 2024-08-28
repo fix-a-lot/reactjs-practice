@@ -34,7 +34,7 @@ function GrandChild({value1, value2, children}) {
   );
 }
 
-export default function Props() {
+export default function PropsTest() {
   console.log('Parent rendered');
 
   return (
