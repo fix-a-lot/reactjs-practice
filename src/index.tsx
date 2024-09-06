@@ -25,6 +25,7 @@ import ReactRouterHooks from './pages/third-party/react-router/react-router-hook
 import TestDayjs from './pages/third-party/dayjs/test-dayjs';
 import TestDatePicker from './pages/third-party/mui/test-x-date-picker';
 import Validation from './pages/third-party/react-hook-form/validation';
+import UseCallbackWrongUsages from './pages/hooks/use-callback-wrong-usages';
 
 const router = createBrowserRouter([
   {
@@ -62,6 +63,10 @@ const router = createBrowserRouter([
       {
         path: 'hooks/use-callback-test',
         element: <UseCallbackTest />
+      },
+      {
+        path: 'hooks/use-callback-wrong-usages',
+        element: <UseCallbackWrongUsages />
       },
       {
         path: 'hooks/use-context-test',

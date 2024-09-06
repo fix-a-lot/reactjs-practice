@@ -41,6 +41,9 @@ export default function Root() {
               <Link to={`/hooks/use-callback-test`}>useCallback</Link>
             </li>
             <li>
+              <Link to={`/hooks/use-callback-wrong-usages`}>useCallback의 잘못된 사용 사례</Link>
+            </li>
+            <li>
               <Link to={'/hooks/use-context-test'}>useContext</Link>
             </li>
             <li>
@@ -67,7 +70,11 @@ export default function Root() {
           </ul>
           <p>React Router</p>
           <ul>
-            <li><Link to={'/third-party/react-router/react-router-hooks/foo?bar=123'}>React Router's hooks</Link></li>
+            <li>
+              <Link to={'/third-party/react-router/react-router-hooks/foo?bar=123'}>
+                React Router's hooks
+              </Link>
+            </li>
           </ul>
           <p>Day.js</p>
           <ul>
@@ -83,7 +90,9 @@ export default function Root() {
           </ul>
           <p>React Hook Form</p>
           <ul>
-            <li><Link to={'/third-party/react-hook-form/validation'}>Validation</Link></li>
+            <li>
+              <Link to={'/third-party/react-hook-form/validation'}>Validation</Link>
+            </li>
           </ul>
         </nav>
         <article>{pathname === '/' ? <p>좌측의 링크를 누르thㅔ요</p> : <Outlet />}</article>
