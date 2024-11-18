@@ -1,8 +1,8 @@
 
-export default function ScratchPad() {
+export default function ScratchPad1() {
   return (
     <article>
-      <h2>Scratch Pad</h2>
+      <h2>Scratch Pad #1</h2>
       <p>Here is a scratch pad for testing out code snippets.</p>
       <form>
         <input type="text" name="id" autoFocus={true} autoComplete={"off"} />

@@ -14,16 +14,19 @@ export default function Root() {
           <p>React Basic Usages</p>
           <ul>
             <li>
+              <Link to={'/etc/scratch-pad1'}>scratch-pad #1</Link>
+            </li>
+            <li>
+              <Link to={'/etc/scratch-pad2'}>scratch-pad #2</Link>
+            </li>
+            <li>
+              <Link to={'/etc/scratch-pad3'}>scratch-pad #3</Link>
+            </li>
+            <li>
               <Link to={'/'}>Home</Link>
             </li>
             <li>
               <Link to={'/etc/coins'}>Coins</Link>
-            </li>
-            <li>
-              <Link to={'/hooks/custom-hooks'}>Custom Hooks</Link>
-            </li>
-            <li>
-              <Link to={'/hooks/forward-ref-test'}>forward-ref</Link>
             </li>
             <li>
               <Link to={'/tags/input-checkbox'}>input-checkbox</Link>
@@ -35,7 +38,10 @@ export default function Root() {
               <Link to={'/props/props-test'}>props</Link>
             </li>
             <li>
-              <Link to={'/etc/scratch-pad'}>scratch-pad</Link>
+              <Link to={'/hooks/custom-hooks'}>Custom Hooks</Link>
+            </li>
+            <li>
+              <Link to={'/hooks/forward-ref-test'}>forward-ref</Link>
             </li>
             <li>
               <Link to={`/hooks/use-callback-test`}>useCallback</Link>
@@ -66,6 +72,15 @@ export default function Root() {
             </li>
             <li>
               <Link to={'/hooks/unified-use-state'}>Unified useState</Link>
+            </li>
+            <li>
+              <Link to={'/hooks/use-state-test1'}>useState() test #1</Link>
+            </li>
+            <li>
+              <Link to={'/hooks/use-state-test2'}>useState() test #2</Link>
+            </li>
+            <li>
+              <Link to={'/hooks/use-state-test3'}>useState() test #3</Link>
             </li>
           </ul>
           <p>React Router</p>
