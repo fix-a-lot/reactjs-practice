@@ -32,10 +32,10 @@ export default function Root() {
               <Link to={'/tags/input-checkbox'}>input-checkbox</Link>
             </li>
             <li>
-              <Link to={'/props/props-with-rendering'}>props와 렌더링</Link>
+              <Link to={'/props/props-test'}>props</Link>
             </li>
             <li>
-              <Link to={'/props/props-test'}>props</Link>
+              <Link to={'/props/props-with-rendering'}>props와 렌더링</Link>
             </li>
             <li>
               <Link to={'/hooks/custom-hooks'}>Custom Hooks</Link>

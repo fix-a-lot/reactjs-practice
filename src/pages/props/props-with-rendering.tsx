@@ -32,7 +32,7 @@ function Child({value1, value2, value3: inheritedValue3, value4}) {
   );
 }
 
-export default function Props() {
+export default function PropsWithRendering() {
   console.log('Parent rendered');
 
   let value1 = 0;

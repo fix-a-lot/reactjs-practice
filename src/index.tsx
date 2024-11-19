@@ -29,14 +29,8 @@ import UseRefWithDom from './pages/hooks/use-ref-with-dom';
 import UseStateTest1 from './pages/hooks/use-state-test1';
 import UseStateTest2 from './pages/hooks/use-state-test2';
 import UseStateTest3 from './pages/hooks/use-state-test3';
-
-function PropsWithRendering() {
-  return null;
-}
-
-function TestDatePicker() {
-  return null;
-}
+import PropsWithRendering from './pages/props/props-with-rendering';
+import TestXDatePicker from './pages/third-party/mui/test-x-date-picker';
 
 const router = createBrowserRouter([
   {
@@ -64,12 +58,12 @@ const router = createBrowserRouter([
         element: <InputCheckbox />
       },
       {
-        path: 'props/props-with-rendering',
-        element: <PropsWithRendering />
-      },
-      {
         path: 'props/props-test',
         element: <PropsTest />
+      },
+      {
+        path: 'props/props-with-rendering',
+        element: <PropsWithRendering />
       },
       {
         path: 'hooks/custom-hooks',
@@ -129,7 +123,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'third-party/mui-x/date-picker',
-        element: <TestDatePicker />
+        element: <TestXDatePicker />
       },
       {
         path: 'third-party/react-hook-form/validation',
