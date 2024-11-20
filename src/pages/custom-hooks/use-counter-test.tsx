@@ -1,11 +1,11 @@
-import useCounter from '../../components/use-counter';
+import useCounter from '../../components/hooks/use-counter';
 
-export default function CustomHooks() {
+export default function UseCounterTest() {
   const {count, increment, decrement, reset} = useCounter();
 
   return (
     <section>
-      <h2>커스텀 훅 테스트</h2>
+      <h2>커스텀 훅 테스트: useCounter</h2>
       <p>count: {count}</p>
       <button onClick={increment}>increment</button>
       <br />

@@ -11,7 +11,8 @@ export default function Root() {
       </header>
       <main id="detail">
         <nav>
-          <p>React Basic Usages</p>
+          <Link to={'/'}>Home</Link>
+          <p>Scratch Pad</p>
           <ul>
             <li>
               <Link to={'/etc/scratch-pad1'}>scratch-pad #1</Link>
@@ -22,11 +23,20 @@ export default function Root() {
             <li>
               <Link to={'/etc/scratch-pad3'}>scratch-pad #3</Link>
             </li>
+          </ul>
+          <p>Custom Hooks</p>
+          <ul>
             <li>
-              <Link to={'/'}>Home</Link>
+              <Link to={'/custom-hooks/use-counter-test'}>useCounter</Link>
             </li>
             <li>
-              <Link to={'/etc/coins'}>Coins</Link>
+              <Link to={'/custom-hooks/use-something-test'}>useSomething</Link>
+            </li>
+          </ul>
+          <p>React Basic Usages</p>
+          <ul>
+            <li>
+              <Link to={'/'}>Home</Link>
             </li>
             <li>
               <Link to={'/tags/input-checkbox'}>input-checkbox</Link>
@@ -36,9 +46,6 @@ export default function Root() {
             </li>
             <li>
               <Link to={'/props/props-with-rendering'}>props와 렌더링</Link>
-            </li>
-            <li>
-              <Link to={'/hooks/custom-hooks'}>Custom Hooks</Link>
             </li>
             <li>
               <Link to={'/hooks/forward-ref-test'}>forward-ref</Link>
@@ -89,6 +96,12 @@ export default function Root() {
               <Link to={'/third-party/react-router/react-router-hooks/foo?bar=123'}>
                 React Router's hooks
               </Link>
+            </li>
+          </ul>
+          <p>ETC.</p>
+          <ul>
+            <li>
+              <Link to={'/etc/coins'}>Coins</Link>
             </li>
           </ul>
           <p>Day.js</p>

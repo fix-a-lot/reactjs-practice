@@ -19,7 +19,7 @@ import ReactRouterHooks from './pages/third-party/react-router/react-router-hook
 import TestDayjs from './pages/third-party/dayjs/test-dayjs';
 import Validation from './pages/third-party/react-hook-form/validation';
 import PropsTest from './pages/props/props-test';
-import CustomHooks from './pages/hooks/custom-hooks';
+import UseCounterTest from './pages/custom-hooks/use-counter-test';
 import ForwardRefTest from './pages/hooks/forward-ref-test';
 import UseCallbackTest from './pages/hooks/use-callback-test';
 import UseEffectTest from './pages/hooks/use-effect-test';
@@ -31,6 +31,7 @@ import UseStateTest2 from './pages/hooks/use-state-test2';
 import UseStateTest3 from './pages/hooks/use-state-test3';
 import PropsWithRendering from './pages/props/props-with-rendering';
 import TestXDatePicker from './pages/third-party/mui/test-x-date-picker';
+import UseSomethingTest from './pages/custom-hooks/use-something-test';
 
 const router = createBrowserRouter([
   {
@@ -66,8 +67,12 @@ const router = createBrowserRouter([
         element: <PropsWithRendering />
       },
       {
-        path: 'hooks/custom-hooks',
-        element: <CustomHooks />
+        path: 'custom-hooks/use-counter-test',
+        element: <UseCounterTest />
+      },
+      {
+        path: 'custom-hooks/use-something-test',
+        element: <UseSomethingTest />
       },
       {
         path: 'hooks/forward-ref-test',
