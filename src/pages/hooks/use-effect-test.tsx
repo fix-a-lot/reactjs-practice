@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 const Paragraph = () => {
   useEffect(() => {
@@ -9,7 +9,7 @@ const Paragraph = () => {
   return <p>보이나요</p>;
 };
 
-export default function UseEffectTest() {
+export default function UseEffectTest(): React.JSX.Element {
   const [foo, setFoo] = useState(0);
   const [refresh, setRefresh] = useState(true);
 
@@ -21,7 +21,7 @@ export default function UseEffectTest() {
   useEffect(() => {
     console.log('🚀 no dependency UseEffect');
     return () => console.log('🧹 no dependency UseEffect');
-  }, [])
+  }, []);
 
   return (
     <section>

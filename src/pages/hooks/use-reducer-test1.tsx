@@ -1,4 +1,4 @@
-import {useReducer} from 'react';
+import React, {useReducer} from 'react';
 
 function reducer(state, action) {
   switch (action.type) {
@@ -11,7 +11,7 @@ function reducer(state, action) {
   }
 }
 
-export default function UseReducerTest1() {
+export default function UseReducerTest1(): React.JSX.Element {
   const [state, dispatch] = useReducer(reducer, {count: 0});
 
   return (

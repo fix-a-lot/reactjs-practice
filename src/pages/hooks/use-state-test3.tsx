@@ -1,6 +1,6 @@
-import {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
-export default function UseStateTest3() {
+export default function UseStateTest3(): React.JSX.Element {
   const [list, setList] = useState([]);
   const seq = useRef(0);
 
@@ -40,7 +40,9 @@ export default function UseStateTest3() {
 
   return (
     <article>
-      <button onClick={findSomething}>찾기</button> <button onClick={resetAndAdd}>초기화</button>
+      <h2>useState Test #3</h2>
+      <button onClick={findSomething}>찾기</button>
+      <button onClick={resetAndAdd}>초기화</button>
       <ul>
         {
           list.map((item, index) => (

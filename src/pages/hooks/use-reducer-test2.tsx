@@ -1,4 +1,4 @@
-import {useReducer} from 'react';
+import React, {useReducer} from 'react';
 
 const initialState = {
   name: '',
@@ -19,7 +19,7 @@ function reducer(state, action) {
   }
 }
 
-export default function UseReducerTest2() {
+export default function UseReducerTest2(): React.JSX.Element {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (

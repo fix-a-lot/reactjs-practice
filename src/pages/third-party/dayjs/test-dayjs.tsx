@@ -2,10 +2,10 @@
  * @file dayjs.tsx
  */
 
-import {useState} from 'react';
+import React, {useState} from 'react';
 import dayjs from 'dayjs';
 
-export default function TestDayjs() {
+export default function TestDayjs(): React.JSX.Element {
   const [r1, setR1] = useState('');
   const [r2, setR2] = useState('');
   const [r3, setR3] = useState('');

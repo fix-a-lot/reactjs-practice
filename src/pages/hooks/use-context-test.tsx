@@ -1,7 +1,7 @@
 /**
  * @file use-context.tsx
  */
-import {createContext, useState} from 'react';
+import React, {createContext, useState} from 'react';
 import Button from '../../components/button';
 import Paragraph from '../../components/paragraph';
 
@@ -10,7 +10,7 @@ export const Foo = createContext<{
   increment?: () => void;
 }>({});
 
-export default function UseContextTest() {
+export default function UseContextTest(): React.JSX.Element {
   const [count, setCount] = useState(0);
 
   function increment() {

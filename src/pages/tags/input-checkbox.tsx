@@ -1,7 +1,7 @@
-import {useState} from 'react';
+import React, {useState} from 'react';
 import styles from '../../styles/container.module.css';
 
-export default function InputCheckbox() {
+export default function InputCheckbox(): React.JSX.Element {
   const [checked1, setChecked1] = useState(false);
   const [checked2, setChecked2] = useState(false);
   const handleChange = event => {

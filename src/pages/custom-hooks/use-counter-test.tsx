@@ -1,6 +1,7 @@
 import useCounter from '../../components/hooks/use-counter';
+import React from 'react';
 
-export default function UseCounterTest() {
+export default function UseCounterTest(): React.JSX.Element {
   const {count, increment, decrement, reset} = useCounter();
 
   return (

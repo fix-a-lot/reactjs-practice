@@ -1,6 +1,6 @@
-import {useRef, useState, useEffect} from 'react';
+import React, {useRef, useState, useEffect} from 'react';
 
-export default function UseRefTest() {
+export default function UseRefTest(): React.JSX.Element {
   const refTest = useRef(null);
   const [value, setValue] = useState('');
 

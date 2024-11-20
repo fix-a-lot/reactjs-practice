@@ -31,7 +31,7 @@ import UseStateTest2 from './pages/hooks/use-state-test2';
 import UseStateTest3 from './pages/hooks/use-state-test3';
 import PropsWithRendering from './pages/props/props-with-rendering';
 import TestXDatePicker from './pages/third-party/mui/test-x-date-picker';
-import UseSomethingTest from './pages/custom-hooks/use-something-test';
+import WaitingReadyForChild from './pages/etc/waiting-ready-for-child';
 
 const router = createBrowserRouter([
   {
@@ -71,8 +71,8 @@ const router = createBrowserRouter([
         element: <UseCounterTest />
       },
       {
-        path: 'custom-hooks/use-something-test',
-        element: <UseSomethingTest />
+        path: 'etc/waiting-ready-for-child',
+        element: <WaitingReadyForChild />
       },
       {
         path: 'hooks/forward-ref-test',

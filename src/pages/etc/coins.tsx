@@ -1,6 +1,6 @@
-import {useState, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 
-export default function Coins() {
+export default function Coins(): React.JSX.Element {
   const [loading, setLoading] = useState(true);
   const [coins, setCoins] = useState([]);
   useEffect(() => {

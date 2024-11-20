@@ -1,9 +1,8 @@
 import {useParams, useSearchParams} from 'react-router-dom';
-import {useState} from 'react';
+import React from 'react';
 
-export default function ReactRouterHooks() {
+export default function ReactRouterHooks(): React.JSX.Element {
   const {lastPath} = useParams();
-
   const [searchParams] = useSearchParams();
 
   return (
@@ -11,5 +10,5 @@ export default function ReactRouterHooks() {
       <p>bar: {searchParams.get('bar')}</p>
       <p>lastPath: {lastPath}</p>
     </section>
-  )
+  );
 }

@@ -1,6 +1,6 @@
-import {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
-export default function UseStateTest1() {
+export default function UseStateTest1(): React.JSX.Element {
   const [list, setList] = useState<number[]>([]);
 
   useEffect(() => {
@@ -13,13 +13,12 @@ export default function UseStateTest1() {
 
   return (
     <article>
+      <h2>useState Test #1</h2>
       <ul>
-        {
-          list.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))
-        }
+        {list.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
       </ul>
     </article>
-  )
+  );
 }

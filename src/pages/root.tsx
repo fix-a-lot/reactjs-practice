@@ -1,4 +1,4 @@
-import {Link, Outlet, useLocation, useResolvedPath} from 'react-router-dom';
+import {Link, Outlet, useResolvedPath} from 'react-router-dom';
 
 export default function Root() {
   const {pathname} = useResolvedPath({});
@@ -12,7 +12,7 @@ export default function Root() {
       <main id="detail">
         <nav>
           <Link to={'/'}>Home</Link>
-          <p>Scratch Pad</p>
+          <p>ETC.</p>
           <ul>
             <li>
               <Link to={'/etc/scratch-pad1'}>scratch-pad #1</Link>
@@ -23,20 +23,32 @@ export default function Root() {
             <li>
               <Link to={'/etc/scratch-pad3'}>scratch-pad #3</Link>
             </li>
+            <li>
+              <Link to={'/etc/waiting-ready-for-child'}>waiting ready for child</Link>
+            </li>
+            <li>
+              <Link to={'/etc/coins'}>Coins</Link>
+            </li>
           </ul>
           <p>Custom Hooks</p>
           <ul>
             <li>
               <Link to={'/custom-hooks/use-counter-test'}>useCounter</Link>
             </li>
-            <li>
-              <Link to={'/custom-hooks/use-something-test'}>useSomething</Link>
-            </li>
           </ul>
           <p>React Basic Usages</p>
           <ul>
             <li>
-              <Link to={'/'}>Home</Link>
+              <Link to={'/hooks/use-state-test1'}>useState() test #1</Link>
+            </li>
+            <li>
+              <Link to={'/hooks/use-state-test2'}>useState() test #2</Link>
+            </li>
+            <li>
+              <Link to={'/hooks/use-state-test3'}>useState() test #3</Link>
+            </li>
+            <li>
+              <Link to={'/hooks/unified-use-state'}>Unified useState</Link>
             </li>
             <li>
               <Link to={'/tags/input-checkbox'}>input-checkbox</Link>
@@ -77,18 +89,6 @@ export default function Root() {
             <li>
               <Link to={'/hooks/use-ref-test'}>useRef</Link>
             </li>
-            <li>
-              <Link to={'/hooks/unified-use-state'}>Unified useState</Link>
-            </li>
-            <li>
-              <Link to={'/hooks/use-state-test1'}>useState() test #1</Link>
-            </li>
-            <li>
-              <Link to={'/hooks/use-state-test2'}>useState() test #2</Link>
-            </li>
-            <li>
-              <Link to={'/hooks/use-state-test3'}>useState() test #3</Link>
-            </li>
           </ul>
           <p>React Router</p>
           <ul>
@@ -96,12 +96,6 @@ export default function Root() {
               <Link to={'/third-party/react-router/react-router-hooks/foo?bar=123'}>
                 React Router's hooks
               </Link>
-            </li>
-          </ul>
-          <p>ETC.</p>
-          <ul>
-            <li>
-              <Link to={'/etc/coins'}>Coins</Link>
             </li>
           </ul>
           <p>Day.js</p>

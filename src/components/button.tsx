@@ -2,10 +2,10 @@
  * @file button.tsx
  */
 
-import {ReactNode, useContext} from 'react';
+import React, {ReactNode, useContext} from 'react';
 import {Foo} from '../pages/hooks/use-context-test';
 
-export default function Button({children}: {children: ReactNode}) {
+export default function Button({children}: {children: ReactNode}): React.JSX.Element {
   const {increment} = useContext(Foo);
 
   return (

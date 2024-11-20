@@ -1,11 +1,11 @@
 /**
  * @file x-date-picker.tsx
  */
-import {useState} from 'react';
+import React, {useState} from 'react';
 import dayjs from 'dayjs';
 import CustomDatePicker from '../../../components/custom-date-picker';
 
-export default function TestXDatePicker() {
+export default function TestXDatePicker(): React.JSX.Element {
   const [r1, setR1] = useState(null);
   const [r2, setR2] = useState(null);
   const [r3, setR3] = useState(null);

@@ -1,4 +1,4 @@
-import {ReactNode} from 'react';
+import React, {ReactNode} from 'react';
 
 function Child({value1, value2, children}) {
   return (
@@ -11,11 +11,7 @@ function Child({value1, value2, children}) {
   );
 }
 
-function SecondChild(props: {
-  value1: string;
-  value2: string;
-  children: ReactNode;
-}) {
+function SecondChild(props: {value1: string; value2: string; children: ReactNode}) {
   return (
     <div>
       <h3>SecondChild</h3>
@@ -34,7 +30,7 @@ function GrandChild({value1, value2, children}) {
   );
 }
 
-export default function PropsTest() {
+export default function PropsTest(): React.JSX.Element {
   console.log('Parent rendered');
 
   return (

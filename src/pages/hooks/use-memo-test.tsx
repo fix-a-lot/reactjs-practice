@@ -1,6 +1,6 @@
-import {useMemo, useState} from 'react';
+import React, {useMemo, useState} from 'react';
 
-export default function UseMemoTest() {
+export default function UseMemoTest(): React.JSX.Element {
   console.log('UseMemoTest 렌더링됨');
   const [value1, setValue1] = useState('');
   const [value2, setValue2] = useState('');

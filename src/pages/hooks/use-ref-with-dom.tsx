@@ -1,6 +1,6 @@
-import {useRef} from 'react';
+import React, {useRef} from 'react';
 
-export default function UseRefWithDom() {
+export default function UseRefWithDom(): React.JSX.Element {
   const myRef = useRef(null);
   const focusInput = () => myRef.current.focus();
 

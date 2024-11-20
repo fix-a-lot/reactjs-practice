@@ -5,6 +5,7 @@
 import {DatePicker, LocalizationProvider} from '@mui/x-date-pickers';
 import {AdapterDayjs} from '@mui/x-date-pickers/AdapterDayjs';
 import {koKR} from '@mui/x-date-pickers/locales';
+import React from 'react';
 
 /**
  * @description
@@ -13,7 +14,7 @@ import {koKR} from '@mui/x-date-pickers/locales';
  * @param props
  * @constructor
  */
-export default function CustomDatePicker(props: any) {
+export default function CustomDatePicker(props: any): React.JSX.Element {
   const handleChange = (date: any) => {
     props.onChange(date);
   };

@@ -3,6 +3,7 @@
  * @constructor
  */
 import {SubmitHandler, useForm} from 'react-hook-form';
+import React from 'react';
 
 type Inputs = {
   name: string;
@@ -11,7 +12,7 @@ type Inputs = {
   phoneNo: string;
 };
 
-export default function Validation() {
+export default function Validation(): React.JSX.Element {
   const {
     register,
     handleSubmit,

@@ -2,9 +2,9 @@
  * @file use-callback.tsx
  */
 
-import {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 
-export default function UseCallbackWrongUsages() {
+export default function UseCallbackWrongUsages(): React.JSX.Element {
   const [foo, setFoo] = useState('');
   const [flag, setFlag] = useState(false);
 
@@ -23,7 +23,7 @@ export default function UseCallbackWrongUsages() {
   useEffect(() => {
     console.log('rendered');
     wrongFunction();
-  }, [foo])
+  }, [foo]);
 
   return (
     <>
@@ -32,10 +32,14 @@ export default function UseCallbackWrongUsages() {
         <section>
           <h3>함수의 클로저</h3>
           <div className="code-result">
-            foo: <input type="text" value={foo} onChange={e => setFoo(e.target.value)} /><br />
+            foo: <input type="text" value={foo} onChange={e => setFoo(e.target.value)} />
+            <br />
             <p>❓foo는 빈 문자열인가: {flag ? '예' : '아니오'}</p>
           </div>
-          <p>'예'는 절대 '아니오'로 변하지 않는다. useCallback으로 생성된 wrongFunction이 최초 렌더링 시점의 foo 값을 '캡처'하기 때문이다.</p>
+          <p>
+            '예'는 절대 '아니오'로 변하지 않는다. useCallback으로 생성된 wrongFunction이 최초 렌더링
+            시점의 foo 값을 '캡처'하기 때문이다.
+          </p>
         </section>
       </section>
     </>

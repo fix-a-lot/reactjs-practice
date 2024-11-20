@@ -1,6 +1,6 @@
-import {useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
-export default function UnifiedUseState() {
+export default function UnifiedUseState(): React.JSX.Element {
   const [values, setValues] = useState({
     value1: '',
     value2: '',

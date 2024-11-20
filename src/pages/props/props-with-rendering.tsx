@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 function Child({value1, value2, value3: inheritedValue3, value4}) {
   console.log('Child rendered');
@@ -32,7 +32,7 @@ function Child({value1, value2, value3: inheritedValue3, value4}) {
   );
 }
 
-export default function PropsWithRendering() {
+export default function PropsWithRendering(): React.JSX.Element {
   console.log('Parent rendered');
 
   let value1 = 0;

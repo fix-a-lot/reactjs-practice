@@ -2,9 +2,9 @@
  * @file use-callback.tsx
  */
 
-import {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useRef, useState} from 'react';
 
-export default function UseCallbackTest() {
+export default function UseCallbackTest(): React.JSX.Element {
   const [foo, setFoo] = useState('');
   const [refresh, setRefresh] = useState(true);
 
@@ -16,6 +16,7 @@ export default function UseCallbackTest() {
     anotherFunction();
   }, []);
   const count = useRef(0);
+
   function anotherFunction() {
     count.current++;
     console.log('hello #' + count.current);
