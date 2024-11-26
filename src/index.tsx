@@ -32,6 +32,8 @@ import UseStateTest3 from './pages/hooks/use-state-test3';
 import PropsWithRendering from './pages/props/props-with-rendering';
 import TestXDatePicker from './pages/third-party/mui/test-x-date-picker';
 import WaitingReadyForChild from './pages/etc/waiting-ready-for-child';
+import UseStateTest4 from './pages/hooks/use-state-test4';
+import ImmerTest from './pages/third-party/immer/immer-test';
 
 const router = createBrowserRouter([
   {
@@ -145,6 +147,14 @@ const router = createBrowserRouter([
       {
         path: '/hooks/use-state-test3',
         element: <UseStateTest3 />
+      },
+      {
+        path: '/hooks/use-state-test4',
+        element: <UseStateTest4 />
+      },
+      {
+        path: '/third-party/immer/immer',
+        element: <ImmerTest />
       }
     ]
   }
