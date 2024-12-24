@@ -87,6 +87,9 @@ export default function Root() {
               <Link to={'/hooks/use-reducer-test-2'}>useReducer #2</Link>
             </li>
             <li>
+              <Link to={'/hooks/use-reducer-test-3'}>useReducer #3</Link>
+            </li>
+            <li>
               <Link to={'/hooks/use-ref-with-dom'}>useRef with DOM</Link>
             </li>
             <li>

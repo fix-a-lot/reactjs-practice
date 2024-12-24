@@ -34,6 +34,7 @@ import TestXDatePicker from './pages/third-party/mui/test-x-date-picker';
 import WaitingReadyForChild from './pages/etc/waiting-ready-for-child';
 import UseStateTest4 from './pages/hooks/use-state-test4';
 import ImmerTest from './pages/third-party/immer/immer-test';
+import UseReducerTest3 from './pages/hooks/use-reducer-test3';
 
 const router = createBrowserRouter([
   {
@@ -107,6 +108,10 @@ const router = createBrowserRouter([
       {
         path: 'hooks/use-reducer-test-2',
         element: <UseReducerTest2 />
+      },
+      {
+        path: 'hooks/use-reducer-test-3',
+        element: <UseReducerTest3 />
       },
       {
         path: 'hooks/use-ref-with-dom',
