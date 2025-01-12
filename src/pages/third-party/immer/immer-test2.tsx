@@ -10,7 +10,7 @@ interface Item {
   shape: string;
 }
 
-export default function ImmerTest(): React.JSX.Element {
+export default function ImmerTest2(): React.JSX.Element {
   const [list, setList] = useState<Item[]>([
     { seq: 1, shape: '🍎' },
     { seq: 2, shape: '🍌' },
@@ -19,7 +19,7 @@ export default function ImmerTest(): React.JSX.Element {
   ]);
 
   function updateArray(index: number, replacement: string): void {
-    setList(produce((draft: WritableDraft<Item>[]): void => {
+    setList(prev => produce(prev, draft => {
       if (draft[index]) {
         draft[index].shape = replacement;
       }

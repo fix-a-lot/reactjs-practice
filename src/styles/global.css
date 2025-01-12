@@ -29,7 +29,7 @@ header {
 main {
   display: flex;
   gap: 10px;
-  height: 80vh;
+  min-height: 80vh;
 }
 
 nav {

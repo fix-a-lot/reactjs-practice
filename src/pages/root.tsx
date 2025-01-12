@@ -125,7 +125,10 @@ export default function Root() {
           <p>Immer</p>
           <ul>
             <li>
-              <Link to={'/third-party/immer/immer'}>Immer</Link>
+              <Link to={'/third-party/immer/immer1'}>Immer test#1</Link>
+            </li>
+            <li>
+              <Link to={'/third-party/immer/immer2'}>Immer test#2</Link>
             </li>
           </ul>
         </nav>
