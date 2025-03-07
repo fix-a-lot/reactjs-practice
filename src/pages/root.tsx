@@ -131,6 +131,12 @@ export default function Root() {
               <Link to={'/third-party/immer/immer2'}>Immer test#2</Link>
             </li>
           </ul>
+          <p>useHooks</p>
+          <ul>
+            <li>
+              <Link to={'/third-party/use-hooks/use-script-test'}>useScript() test</Link>
+            </li>
+          </ul>
         </nav>
         <article>{pathname === '/' ? <p>좌측의 링크를 누르thㅔ요</p> : <Outlet />}</article>
       </main>

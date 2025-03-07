@@ -36,6 +36,7 @@ import UseStateTest4 from './pages/hooks/use-state-test4';
 import ImmerTest2 from './pages/third-party/immer/immer-test2';
 import UseReducerTest3 from './pages/hooks/use-reducer-test3';
 import ImmerTest1 from './pages/third-party/immer/immer-test1';
+import UseScriptTest from './pages/third-party/use-hooks/use-script-test';
 
 const router = createBrowserRouter([
   {
@@ -165,6 +166,10 @@ const router = createBrowserRouter([
       {
         path: '/third-party/immer/immer2',
         element: <ImmerTest2 />
+      },
+      {
+        path: '/third-party/use-hooks/use-script-test',
+        element: <UseScriptTest />
       }
     ]
   }

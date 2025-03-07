@@ -7,6 +7,7 @@ export default function ReactRouterHooks(): React.JSX.Element {
 
   return (
     <section>
+      <h2>React Router Hooks</h2>
       <p>bar: {searchParams.get('bar')}</p>
       <p>lastPath: {lastPath}</p>
     </section>
