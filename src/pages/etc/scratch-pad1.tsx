@@ -1,17 +1,24 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import WeirdComponent from './weird-component';
 
 export default function ScratchPad1(): React.JSX.Element {
+  const [jQueryVersion, setVersion] = useState('loading...');
+
+  useEffect(() => {
+    // interval로 jQuery 로딩 끝났는지 확인하기
+    const intervalId = setInterval(() => {
+      if (typeof window.jQuery !== 'undefined') {
+        setVersion(window.jQuery('body').jquery);
+        clearInterval(intervalId);
+      }
+    }, 500);
+  }, []);
+
   return (
-    <article>
-      <h2>Scratch Pad #1</h2>
-      <p>Here is a scratch pad for testing out code snippets.</p>
-      <form>
-        <input type="text" name="id" autoFocus={true} autoComplete={'off'} />
-        <br />
-        <input type="password" name="pswd" autoFocus={true} autoComplete={'off'} />
-        <br />
-        <button>submit</button>
-      </form>
-    </article>
+    <section>
+      <h2>script loading test #2</h2>
+      <p>jQuery version: {jQueryVersion}</p>
+      <WeirdComponent />
+    </section>
   );
 }
