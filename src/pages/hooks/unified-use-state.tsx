@@ -26,7 +26,7 @@ export default function UnifiedUseState(): React.JSX.Element {
   };
 
   useEffect(() => {
-    console.debug('values:', values);
+    console.log('values:', values);
   }, [values]);
 
   return (

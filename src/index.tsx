@@ -37,6 +37,7 @@ import ImmerTest2 from './pages/third-party/immer/immer-test2';
 import UseReducerTest3 from './pages/hooks/use-reducer-test3';
 import ImmerTest1 from './pages/third-party/immer/immer-test1';
 import UseScriptTest from './pages/third-party/use-hooks/use-script-test';
+import UseSwrTest from './pages/third-party/vercel/use-swr-test';
 
 const router = createBrowserRouter([
   {
@@ -130,6 +131,10 @@ const router = createBrowserRouter([
       {
         path: '/third-party/react-router/react-router-hooks/:lastPath',
         element: <ReactRouterHooks />
+      },
+      {
+        path: '/third-party/vercel/swr-test',
+        element: <UseSwrTest />
       },
       {
         path: '/third-party/dayjs/dayjs',

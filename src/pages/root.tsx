@@ -104,6 +104,12 @@ export default function Root() {
               </Link>
             </li>
           </ul>
+          <p>Vercel</p>
+          <ul>
+            <li>
+              <Link to={'/third-party/vercel/swr-test'}>useSWR</Link>
+            </li>
+          </ul>
           <p>Day.js</p>
           <ul>
             <li>
