@@ -1,26 +1,16 @@
 /**
  * @file use-context.tsx
  */
-import React, {createContext, useState} from 'react';
-import Button from '../../components/button';
-import Paragraph from '../../components/paragraph';
-
-export const Foo = createContext<{
-  count?: number;
-  increment?: () => void;
-}>({});
+import React from 'react';
+import Button from '../../components/Button';
+import Paragraph from '../../components/Paragraph';
+import FooProvider from '../../components/FooProvider';
 
 export default function UseContextTest(): React.JSX.Element {
-  const [count, setCount] = useState(0);
-
-  function increment() {
-    setCount(prev => prev + 1);
-  }
-
   return (
     <section>
       <h2>useContext 테스트</h2>
-      <Foo.Provider value={{count, increment}}>
+      <FooProvider>
         <div>
           <Button>이 버튼이나</Button>
         </div>
@@ -30,7 +20,7 @@ export default function UseContextTest(): React.JSX.Element {
         <div>
           <Paragraph />
         </div>
-      </Foo.Provider>
+      </FooProvider>
       <Button>여긴 안됨</Button>
     </section>
   );

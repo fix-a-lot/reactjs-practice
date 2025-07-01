@@ -3,7 +3,7 @@
  */
 import React, {useState} from 'react';
 import dayjs from 'dayjs';
-import CustomDatePicker from '../../../components/custom-date-picker';
+import CustomDatePicker from '../../../components/CustomDatePicker';
 
 export default function TestXDatePicker(): React.JSX.Element {
   const [r1, setR1] = useState(null);

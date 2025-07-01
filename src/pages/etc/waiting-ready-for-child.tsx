@@ -5,7 +5,7 @@
  */
 
 import React, {useEffect, useState} from 'react';
-import ChildComponent from '../../components/child-component';
+import ChildComponent from '../../components/ChildComponent';
 
 export default function WaitingReadyForChild() {
   const [isChildReady, setIsChildReady] = useState(false);

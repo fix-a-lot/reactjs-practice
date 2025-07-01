@@ -1,9 +1,9 @@
 /**
- * @file paragraph.tsx
+ * @file Paragraph.tsx
  */
 
 import React, {useContext} from 'react';
-import {Foo} from '../pages/hooks/use-context-test';
+import {Foo} from './FooProvider';
 
 export default function Paragraph(): React.JSX.Element {
   const {count} = useContext(Foo);
