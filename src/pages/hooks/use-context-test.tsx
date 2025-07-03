@@ -2,8 +2,8 @@
  * @file use-context.tsx
  */
 import React from 'react';
-import Button from '../../components/Button';
-import Paragraph from '../../components/Paragraph';
+import ButtonForUseContext from '../../components/ButtonForUseContext';
+import ParagraphForUseContext from '../../components/ParagraphForUseContext';
 import FooProvider from '../../components/FooProvider';
 
 export default function UseContextTest(): React.JSX.Element {
@@ -12,16 +12,16 @@ export default function UseContextTest(): React.JSX.Element {
       <h2>useContext 테스트</h2>
       <FooProvider>
         <div>
-          <Button>이 버튼이나</Button>
+          <ButtonForUseContext>이 버튼이나</ButtonForUseContext>
         </div>
         <div>
-          <Button>이 버튼을 누르면 값이 증가함</Button>
+          <ButtonForUseContext>이 버튼을 누르면 값이 증가함</ButtonForUseContext>
         </div>
         <div>
-          <Paragraph />
+          <ParagraphForUseContext />
         </div>
       </FooProvider>
-      <Button>여긴 안됨</Button>
+      <ButtonForUseContext>여긴 안됨</ButtonForUseContext>
     </section>
   );
 }
