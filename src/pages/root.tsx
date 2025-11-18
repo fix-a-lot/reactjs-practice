@@ -51,6 +51,9 @@ export default function Root() {
               <Link to={'/hooks/use-state-test4'}>useState() test #4</Link>
             </li>
             <li>
+              <Link to={'/hooks/use-state-test5'}>useState() test #5</Link>
+            </li>
+            <li>
               <Link to={'/hooks/unified-use-state'}>Unified useState</Link>
             </li>
             <li>

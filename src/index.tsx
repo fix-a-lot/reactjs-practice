@@ -38,6 +38,7 @@ import UseReducerTest3 from './pages/hooks/use-reducer-test3';
 import ImmerTest1 from './pages/third-party/immer/immer-test1';
 import UseScriptTest from './pages/third-party/use-hooks/use-script-test';
 import UseSwrTest from './pages/third-party/vercel/use-swr-test';
+import UseStateTest5 from './pages/hooks/use-state-test5';
 
 const router = createBrowserRouter([
   {
@@ -163,6 +164,10 @@ const router = createBrowserRouter([
       {
         path: '/hooks/use-state-test4',
         element: <UseStateTest4 />
+      },
+      {
+        path: '/hooks/use-state-test5',
+        element: <UseStateTest5 />
       },
       {
         path: '/third-party/immer/immer1',
