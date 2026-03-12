@@ -81,6 +81,9 @@ export default function Root() {
               <Link to={'/hooks/use-effect-test'}>useEffect</Link>
             </li>
             <li>
+              <Link to={'/hooks/use-effect-with-use-ref'}>useEffect with useRef</Link>
+            </li>
+            <li>
               <Link to={'/hooks/use-memo-test'}>useMemo</Link>
             </li>
             <li>

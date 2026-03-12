@@ -39,6 +39,7 @@ import ImmerTest1 from './pages/third-party/immer/immer-test1';
 import UseScriptTest from './pages/third-party/use-hooks/use-script-test';
 import UseSwrTest from './pages/third-party/vercel/use-swr-test';
 import UseStateTest5 from './pages/hooks/use-state-test5';
+import UseEffectWithUseRefTest from './pages/hooks/use-effect-with-use-ref';
 
 const router = createBrowserRouter([
   {
@@ -100,6 +101,10 @@ const router = createBrowserRouter([
       {
         path: 'hooks/use-effect-test',
         element: <UseEffectTest />
+      },
+      {
+        path: 'hooks/use-effect-with-use-ref',
+        element: <UseEffectWithUseRefTest />
       },
       {
         path: 'hooks/use-memo-test',
